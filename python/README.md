@@ -22,7 +22,11 @@ BECAUSE OF THE INTENDED END-GOAL, ONLY
 
 THESE SAMPLES do represent a A MEANINGFUL LOOK at 
 the current state of my coding style, practices, 
-strategies and thinking.
+strategies and thinking. My implementation on 
+them proceeded with NO TIMEr but at a BEST RATE
+I could. This means, from a FEW MINUTES to a COUPLE
+OF HOURs on the some -- with some exceptions
+on which I had to take a break to think abou them. 
 
 Prior to that, from Jun/2016 through Jun/2018, I was 
 away from programming -- barely breathing or surviving. 
@@ -39,7 +43,8 @@ them to see them working.
 
 Others, please refrain from copying, accessing, or 
 using this code. Solely for this reason, the python 
-code samples are copyrighted.
+code samples are copyrighted. Obviously, this does 
+not include the leetcode problem descriptions.
 
 my website is at:
 http://nelsonmanohar.wordpress.com

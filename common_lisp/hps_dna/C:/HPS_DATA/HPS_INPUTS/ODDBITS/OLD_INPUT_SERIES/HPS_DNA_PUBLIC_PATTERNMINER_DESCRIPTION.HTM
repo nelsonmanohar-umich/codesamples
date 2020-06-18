@@ -1,0 +1,61 @@
+<HTML> <HEAD> <TITLE>HPS DNA PATTERN MINER</TITLE>
+<STYLE>
+<!--
+@font-face {font-family:Helvetica; panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face {font-family:Courier; panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face {font-family:Times; panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face {font-family:Verdana; panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face {font-family:Garamond; panose-1:2 2 4 4 3 3 1 1 8 3;}
+p.MsoNormal, li.MsoNormal, div.MsoNormal {margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;}
+@page Section0 {size:8.5in 11.0in; margin:0.5in 0.5in 0.5in 0.5in; font-size:10.0pt; font-family:Verdana;}
+div.Section0 {page:Section0;}
+-->
+</STYLE> </HEAD> <BODY LANG=EN-US> 
+<DIV CLASS=MSONORMAL ALIGN=JUSTIFY>
+<H3>REPORT OF HPS DNA SEQUENCE ALIGNMENT </H3>
+<P> The functions on this file implement an approximate pattern match search for a signature within test sequence. 
+Both the signature and test sequence are time series of HPS_DNA_ segments. Both these were generated using the HPS_DNA_
+transform at common baselining values (e.g., HPS_DNA_(60, 30, 0.001)).
+The approximate pattern match search looks for all the possible instances of the signature within the test sequence.
+A match is produced when a significant number of ordered HPS_DNA_ segments in a signature are approximately matched to
+an appropiate set of HPS_DNA_ segments in the test sequence. 
+The match is a (conditional) probabilisty match based on the combined probability of an ordered set of HPS_DNA_ segments 
+in the signature to approximately match an ordered set of HPS_DNA_ segments in the test sequence. To do this, each 
+individual approximate match attempts to find for each segment in the signature, an instance within the test 
+sequence which has similar duration, relative positioning within the time series, and similar HPS_DNA_ targeting value. 
+All repeated approximate repeats of the presence of the signature within the test sequence are found and reported. 
+Note that even overlapping instances are also uncovered. The overall complexity of the approximate pattern match
+is as follows:
+</P>
+<P>
+if n is the number of HPS_DNA_ segments in the signature and m is the number of HPS_DNA_ segments in the test sequence
+the algorithm has O(m(m*n)) time complexity (i.e., time complexity is quadratic on the HPS_DNA_ fractality of the 
+test sequence). This relatively low complexity is achieved through multiple space tradeoffs. 
+The reader should note that this complexity is relatively low once one realizes that m and n are HPS_DNA_ fractalities, 
+and thus could often be several orders of magnitude in reduction from the size of their underlying time series. 
+For example, for a test sequence such as the DNA which prior to HPS_DNA_ encoding was of size equal to 1100 units, 
+its HPS_DNA_ approximation had only 20 or so non-trivial HPS_DNA_ segments. If the test sequence had 60 non-trivial 
+segments, then algorithm complexity is of the order of O( 60 * 60 * 20) which compares favorably to O( 3600^2)
+complexity needed to deterministically find approximate substrings.
+This code is for demonstration purposes and is not intended as an efficient implementation of the approximate pattern
+match but rather as an illustration of such being possible, something which was argued could not be done by those
+who like to critique hoping to sabotage credibility.
+</P>
+<P>
+Each instance is ranked in terms of a cost metric which provides a relative comparison of how good an approximate
+pattern match is an individual instance. The user is provided the opportunity to reduce the output by choosing a
+threshold point, for which approximations exhibiting a cost metric higher than such are discarded. 
+The output consist of a table of the resulting approximate pattern match for repeats of the HPS_DNA_ signature within the
+test sequence together with cost metrics information.  Of course, the (conditional) probability of the approximate 
+pattern match could also be computed but that is not done yet.
+</P>
+<P>
+The approximation produced by the HPS TRANSFORM results in a time series of "ATS segments" 
+that exhibit small and controlled variability around the (hidden) fundamental frequencies 
+of its underlying random process. That is, without explicit awareness of TIMESCALE on the 
+input signal, the time series of these random-length "ATS segments" describes a bounded-error 
+controlled variability trajectory over the (true but hidden) "PROCESS STATES" of the underlying 
+random process {X}. Below is shown a plot of the resultant HPS approximation.
+</P>
+</DIV> </BODY> </HTML> 
+

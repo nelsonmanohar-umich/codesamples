@@ -1,0 +1,614 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="robots" content="index, nofollow, noarchive"/><title>NCBI Sequence Viewer v2.0</title><!--MUTABLE--><!--www.ncbi.nlm.nih.gov:80--><!--MUTABLE--><link type="text/css" rel="stylesheet" href="http://www.ncbi.nlm.nih.gov/corehtml/ncbi_test.css"/><link type="text/css" rel="stylesheet" href="../sviewer/viewer.css"/><script type="text/javascript" src="../sviewer/viewer.js"> </script><script type="text/javascript" src="http://www.ncbi.nlm.nih.gov/coreweb/javascript/popupmenu2/popupmenu2_6loader.js"> </script></head><body ><form name="frmQueryBox0" action="../entrez/query.fcgi" method="get" style="margin:0"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="left" width="130"><a href="http://www.ncbi.nlm.nih.gov"><img src="http://www.ncbi.nlm.nih.gov/corehtml/left.GIF" width="130" height="45" border="0" alt="NCBI"/></a></td><td align="left"><img src="/entrez/query/static/gifs/entrez_nuc.gif" alt="Nucleotide banner"/></td><td><table class="medium1" border="0" bordercolor="#336699" cellpadding="2" cellspacing="0" align="right"><tr><td bgcolor="#336699" align="right"><a href="http://www.ncbi.nlm.nih.gov/entrez/cubby.fcgi?call=QueryExt.CubbyQuery..ShowAll&amp;db=nucleotide"><font color="#FFFFFF"><b>My NCBI</b></font></a></td></tr><tr><td nowrap="1"><!--MUTABLE--><a href="http://www.ncbi.nlm.nih.gov/entrez/login.fcgi?call=so.SignOn..Login&amp;currentURL=http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?&amp;cmd=Display&amp;ef_CDD=8&amp;ef_Exon=512&amp;ef_HPRD=32&amp;ef_MGC=16&amp;ef_STS=64&amp;ef_microRNA=256&amp;ef_tRNA=128&amp;extrafeat=1016&amp;linkbar=jsmenu3&amp;list_uids=1787047" onClick="if(myncbi_xo == 0){window.open('http://www.ncbi.nlm.nih.gov/entrez/login.fcgi?call=so.SignOn..Login&amp;amp;tmpl=MiniBaseFile','Save2Cubby','resizable=yes,scrollbars=yes,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no,alwaysRaised=yes,depend=yes,top=50,left=200,width=400,height=100');return false;} return true;"><!--MUTABLE-->[Sign In]</a> 
+                                <!--MUTABLE--><a href="http://www.ncbi.nlm.nih.gov/entrez/login.fcgi?call=so.SignOn..Register&amp;currentURL=http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?&amp;cmd=Display&amp;ef_CDD=8&amp;ef_Exon=512&amp;ef_HPRD=32&amp;ef_MGC=16&amp;ef_STS=64&amp;ef_microRNA=256&amp;ef_tRNA=128&amp;extrafeat=1016&amp;linkbar=jsmenu3&amp;list_uids=1787047" onClick="if(myncbi_xo == 0){window.open('http://www.ncbi.nlm.nih.gov/entrez/login.fcgi?call=so.SignOn..Register&amp;amp;tmpl=MiniBaseFile','Save2Cubby','resizable=yes,scrollbars=yes,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no,alwaysRaised=yes,depend=yes,top=50,left=200,width=400,height=100');return false;} return true;" title="Click to register for an account"><!--MUTABLE-->[Register]</a></td></tr></table></td></tr></table></td></tr><tr><td><table class="text" border="0" cellspacing="0" cellpadding="2" bgcolor="#000000" width="100%"><tr class="text" align="center"><td><a href="/entrez/query.fcgi?db=PubMed" class="gutter3"><font color="#ffffff">PubMed</font></a></td><td><a href="/entrez/query.fcgi?db=Nucleotide" class="gutter3"><font color="#ffffff">Nucleotide</font></a></td><td><a href="/entrez/query.fcgi?db=Protein" class="gutter3"><font color="#ffffff">Protein</font></a></td><td><a href="/entrez/query.fcgi?db=Genome" class="gutter3"><font color="#ffffff">Genome</font></a></td><td><a href="/entrez/query.fcgi?db=Structure" class="gutter3"><font color="#ffffff">Structure</font></a></td><td><a href="/entrez/query.fcgi?db=PMC" class="gutter3"><font color="#ffffff">PMC</font></a></td><td><a href="/entrez/query.fcgi?db=Taxonomy" class="gutter3"><font color="#ffffff">Taxonomy</font></a></td><td><a href="/entrez/query.fcgi?db=OMIM" class="gutter3"><font color="#ffffff">OMIM</font></a></td><td><a href="/entrez/query.fcgi?db=Books" class="gutter3"><font color="#ffffff">Books</font></a></td></tr></table></td></tr><tr><td><table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#cccccc"><tr><td class="small1" nowrap="1">
+                                             Search <small><select name="db" title="Select database for search"><option value="pubmed">PubMed</option><option value="protein">Protein</option><option value="nucleotide" selected="1">Nucleotide</option><option value="nuccore">  CoreNucleotide</option><option value="nucgss">  GSS</option><option value="nucest">  EST</option><option value="structure">Structure</option><option value="genome">Genome</option><option value="books">Books</option><option value="cancerchromosomes">CancerChromosomes</option><option value="cdd">Conserved Domains</option><option value="domains">3D Domains</option><option value="gene">Gene</option><option value="genomeprj">Genome Project</option><option value="gensat">GENSAT</option><option value="geo">GEO Profiles</option><option value="gds">GEO Datasets</option><option value="homologene">HomoloGene</option><option value="journals">Journals</option><option value="mesh">MeSH</option><option value="ncbisearch">NCBI Web Site</option><option value="nlmcatalog">NLM Catalog</option><option value="omim">OMIM</option><option value="pmc">PMC</option><option value="popset">PopSet</option><option value="pcassay">PubChem BioAssay</option><option value="pccompound">PubChem Compound</option><option value="pcsubstance">PubChem Substance</option><option value="snp">SNP</option><option value="taxonomy">Taxonomy</option><option value="unigene">UniGene</option><option value="unists">UniSTS</option></select></small><input name="cmd" type="hidden" value=""/> for
+                                            <input name="term" size="45" type="text" value=""/> 
+                                            <input name="go" type="submit" value="Go" title="Send search request"/> 
+                                            <input name="clear" type="button" value="Clear" onclick="this.form.term.value='';this.form.term.focus();" title="Clear search field"/></td></tr></table></td></tr></table><noscript><b><big><font color="#ff0000">You need JavaScript to work with this page.</font></big></b></noscript><table border="0" bgcolor="#cccccc" cellspacing="0" cellpadding="3" width="100%"><tr><td class="tabna" width="50"> </td><td nowrap="1" width="14%"><a CLASS="pmlinkna" HREF="javascript:Go('Limits')">Limits</a></td><td CLASS="tabna" NOWRAP="1" WIDTH="14%"><a CLASS="pmlinkna" HREF="javascript:Go('Index')">Preview/Index</a></td><td CLASS="tabna" NOWRAP="1" WIDTH="14%"><a CLASS="pmlinkna" HREF="javascript:Go('History')">History</a></td><td CLASS="tabna" NOWRAP="1" WIDTH="14%"><a CLASS="pmlinkna" HREF="javascript:Go('Clipboard')">Clipboard</a></td><td CLASS="tabna" NOWRAP="1" WIDTH="14%"><a CLASS="pmlinkna" HREF="javascript:Go('Details')">Details</a></td><td CLASS="tabna" NOWRAP="1" WIDTH="14%"/></tr></table></form><form action="viewer.fcgi" method="get" name="frmViewerBox" style="margin:0"><table bgcolor="#c0c0c0" border="0" cellpadding="4" cellspacing="0" width="100%"><tr><td nowrap="yes"><input name="db" type="hidden" value="nucleotide"/><input name="qty" type="hidden" value="1"/><input name="c_start" type="hidden" value="1"/><input id="list_uids" name="list_uids" type="hidden" value="1787047"/><input id="uids" name="uids" type="hidden" value=""/><small> Display 
+                                <select name="dopt" title="Choose format of representation" onchange="submit();"><option value="gb" selected="1">GenBank</option><option value="gbwithparts">GenBank(Full)</option><option value="gbc">INSDSeq XML</option><option value="fasta">FASTA</option><option value="tinyseq">TinySeq XML</option><option value="asn">ASN.1</option><option value="xml">XML</option><option value="graph">Graph</option><option value="gi">GI List</option><option value="brief">Brief</option><option value="docsum">Summary</option></select>
+                                 Show
+                                <select name="dispmax" onchange="submit()"><option value="1">1</option><option value="2">2</option><option value="5" selected="1">5</option><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="500">500</option></select><select name="sendto" onchange="do_sendto(this); submit();"><option value="" selected="1">Send to</option><option value="t">Text</option><option value="on">File</option><option value="Add To Clipboard">Clipboard</option></select>
+                                     
+                                    <span class="group">
+                                         Hide: 
+                                        <input type="hidden" id="fmt_mask" name="fmt_mask" value="0"/><label title="Hide sequence and translations"><input type="checkbox" id="truncate" name="truncate" value="294912"/>
+                                              sequence
+                                        </label>
+                                         
+                                        <label title="Hide features such as variations, CDD regions, CDS products, repeat_regions etc"><input type="checkbox" id="less_feat" name="less_feat" value="504"/>
+                                              all but gene, CDS and mRNA features
+                                        </label>
+                                         
+                                    </span></small></td></tr></table><div style="background-color:#c0c0c0" width="100%"><table bgcolor="#c0c0c0" border="0" cellpadding="4" cellspacing="0"><tr><td nowrap="1"><small>
+                          <span class="group" title="Show only region of the sequence (from-to)">Range: from 
+                        <input type="text" name="from" size="9" maxlength="12" value="begin"/>
+                         to 
+                        <input type="text" name="to" size="9" maxlength="12" value="end"/></span><label for="strand"> 
+                            <span class="group" title="Choose strand to project data to"><input type="checkbox" id="strand" name="strand"/>
+                                    Reverse complemented strand
+                            </span></label></small></td><td nowrap="1"><small><input type="hidden" name="extrafeatpresent" value="1"/><span class="group" title="Mark external annotations to include in report">Features:
+                
+                  <input type="button" value="+" title="Show full list of annotations" onclick="operate_passive_features(this)"/><span id="passive_features" style="display:none"> 
+                    <label id="ef_SNP"><input type="checkbox" id="ef_SNP" name="ef_SNP" value="1"/><span class="defeat" title="No annotation of Variations">SNP</span></label> 
+                    <label id="ef_CDD"><input type="checkbox" id="ef_CDD" name="ef_CDD" value="8" checked="1"/><span class="defeat" title="No annotation of Conserved Domains">CDD</span></label> 
+                    <label id="ef_MGC"><input type="checkbox" id="ef_MGC" name="ef_MGC" value="16" checked="1"/><span class="defeat" title="No annotation of Differences vs. the Reference Genome">MGC</span></label> 
+                    <label id="ef_HPRD"><input type="checkbox" id="ef_HPRD" name="ef_HPRD" value="32" checked="1"/><span class="defeat" title="No annotation of Post-Translational Modifications from HPRD">HPRD</span></label> 
+                    <label id="ef_STS"><input type="checkbox" id="ef_STS" name="ef_STS" value="64" checked="1"/><span class="defeat" title="No annotation of Sequence Tagged Site">STS</span></label> 
+                    <label id="ef_tRNA"><input type="checkbox" id="ef_tRNA" name="ef_tRNA" value="128" checked="1"/><span class="defeat" title="No annotation of tRNAs (predicted)">tRNA</span></label> 
+                    <label id="ef_microRNA"><input type="checkbox" id="ef_microRNA" name="ef_microRNA" value="256" checked="1"/><span class="defeat" title="No annotation of microRNA">microRNA</span></label> 
+                    <label id="ef_Exon"><input type="checkbox" id="ef_Exon" name="ef_Exon" value="512" checked="1"/><span class="defeat" title="No annotation of Exon, or the location on a transcript that is derived from an exon">Exon</span></label></span></span></small></td><td><input type="submit" value="Refresh" id="refresh"/></td></tr></table></div><script type="text/javascript">
+                var fmt_mod  = new FormatModifer();
+            </script></form>
+<div class='records'><!-- docsumok 1787047 1787047 1 0 0 -->
+<div class='docsum' id='gi_1787047'>
+<table width='100%' border='0' cellpadding='0' cellspacing='0' >
+<tr>
+<td><input name="uid" type="checkbox" value="1787047"><b>1: </b>&nbsp;<a href='/entrez/viewer.fcgi?db=nucleotide&val=1787047'>AE000185</a>.&nbsp;<a class="dblinks" href="javascript:PopUpMenu2_Set(Reports1787047)" onMouseOut="PopUpMenu2_Hide()">Reports<script language="JavaScript1.2">
+<!--
+var PopUpMenu2_LocalConfig_Reports1787047 = [
+  ["TitleText","Reports"]
+]
+var Reports1787047 = [
+  ["UseLocalConfig","Reports1787047","",""],
+  ["ASN.1","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=asn'","",""],
+  ["XML","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=xml'","",""],
+  ["Summary","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=docsum'","",""],
+  ["Brief","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=brief'","",""],
+  ["FASTA","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=fasta'","",""],
+  ["TinySeq XML","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=fasta_xml'","",""],
+  ["GenBank","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=gb'","",""],
+  ["INSDSeq XML","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=gbc_xml'","",""],
+  ["GenBank(Full)","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=gbwithparts'","",""],
+  ["GI List","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=gi'","",""],
+  ["Graphic","window.top.location='/entrez/viewer.fcgi?list_uids=1787047&db=nucleotide&dopt=graph'","",""],
+  ["Revision History","window.top.location='/entrez/sutils/girevhist.cgi?val=AE000185'","",""]
+]
+//-->
+</script>
+</a>&nbsp;...[gi:1787047] 
+<font color='red'>The record has been replaced by <a href='/entrez/viewer.fcgi?db=nucleotide&val=U00096'>U00096</a></font></td>
+<td align='right' width='15%'></td>
+</tr>
+</table>
+</div>
+<div class='recordbody'><div class="sequence"><a name="locus_1787047"></a><div class="localnav"><ul class="locals"><li><a href="#comment_1787047" title="Jump to the comment section of this record">Comment</a></li><li><a href="#feature_1787047" title="Jump to the feature table of this record">Features</a></li><li><a href="#sequence_1787047" title="Jump to the sequence of this record">Sequence</a></li></ul></div>
+<pre class="genbank">LOCUS       AE000185               13857 bp    DNA     linear   BCT 01-DEC-2000
+DEFINITION  Escherichia coli K12 MG1655 section 75 of 400 of the complete
+            genome.
+ACCESSION   AE000185 U00096
+VERSION     AE000185.1  GI:1787047
+KEYWORDS    .
+SOURCE      Escherichia coli K12
+  ORGANISM  <a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333>Escherichia coli K12</a>
+            Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacteriales;
+            Enterobacteriaceae; Escherichia.
+REFERENCE   1  (bases 1 to 13857)
+  AUTHORS   Blattner,F.R., Plunkett,G. III, Bloch,C.A., Perna,N.T., Burland,V.,
+            Riley,M., Collado-Vides,J., Glasner,J.D., Rode,C.K., Mayhew,G.F.,
+            Gregor,J., Davis,N.W., Kirkpatrick,H.A., Goeden,M.A., Rose,D.J.,
+            Mau,B. and Shao,Y.
+  TITLE     The complete genome sequence of Escherichia coli K-12
+  JOURNAL   Science 277 (5331), 1453-1474 (1997)
+   PUBMED   <a href=/sites/entrez?cmd=Retrieve&db=pubmed&list_uids=9278503>9278503</a>
+REFERENCE   2  (bases 1 to 13857)
+  AUTHORS   Blattner,F.R.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-JAN-1997) Guy Plunkett III, Laboratory of Genetics,
+            University of Wisconsin, 445 Henry Mall, Madison, WI 53706, USA.
+            Email: ecoli@genetics.wisc.edu Phone: 608-262-2534 Fax:
+            608-263-7459
+REFERENCE   3  (bases 1 to 13857)
+  AUTHORS   Blattner,F.R.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (02-SEP-1997) Guy Plunkett III, Laboratory of Genetics,
+            University of Wisconsin, 445 Henry Mall, Madison, WI 53706, USA.
+            Email: ecoli@genetics.wisc.edu Phone: 608-262-2534 Fax:
+            608-263-7459
+REFERENCE   4  (bases 1 to 13857)
+  AUTHORS   Plunkett,G. III.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (13-OCT-1998) Laboratory of Genetics, University of
+            Wisconsin, 445 Henry Mall, Madison, WI 53706, USA
+<a name="comment_1787047"></a>COMMENT     [WARNING] On Jun 21, 2004 this sequence was replaced by
+            gi:<a href=/entrez/viewer.fcgi?val=48994873>48994873</a>.
+            This sequence was determined by the E. coli Genome Project at the
+            University of Wisconsin-Madison (Frederick R. Blattner, director).
+            Supported by NIH grants HG00301 and HG01428 (from the Human Genome
+            Project and NCHGR). The entire sequence was independently
+            determined from E. coli K12 strain MG1655. Predicted open reading
+            frames were determined using GeneMark software, kindly supplied by
+            Mark Borodovsky, Georgia Institute of Technology, Atlanta, GA,
+            30332 [e-mail: mark@amber.gatech.edu].  Open reading frames that
+            have been correlated with genetic loci are being annotated with CG
+            Site Nos., unique ID nos. for the genes in the E. coli Genetic
+            Stock Center (CGSC) database at Yale University, kindly supplied by
+            Mary Berlyn. A public version of the database is accessible
+            (<a href=http://cgsc.biology.yale.edu>http://cgsc.biology.yale.edu</a>). Annotation of the genome is an
+            ongoing task whose goal is to make the genome sequence more useful
+            by correlating it with other data.  Comments to the authors are
+            appreciated. Updated information will be available at the E. coli
+            Genome Project's World Wide Web site
+            (<a href=http://www.genetics.wisc.edu>http://www.genetics.wisc.edu</a>). *** The E. coli K12 sequence and
+            its annotations are periodically updated; this is version M54. No
+            sequence changes. Annotation updates: updated gene identifications
+            and products; all new functional assignments courtesy of Monica
+            Riley; added promoters, protein binding sites, and repeated
+            sequences described in reference 1. The unique numeric identifiers
+            beginning with a lowercase 'b' assigned to each gene (protein- or
+            RNA-encoding) are now designated as gene synonyms instead of
+            labels. This should allow them to be searched for in Entrez as gene
+            names.
+<a name="feature_1787047"></a>FEATURES             Location/Qualifiers
+     source          1..13857
+                     /organism="Escherichia coli K12"
+                     /mol_type="genomic DNA"
+                     /strain="K12"
+                     /sub_strain="MG1655"
+                     /db_xref="taxon:<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333>83333</a>"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=68&to=817&view=gbwithparts>gene</a>            complement(68..817)
+                     /gene="moeB"
+                     /note="synonym: b0826"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=68&to=817&view=gbwithparts>CDS</a>             complement(68..817)
+                     /gene="moeB"
+                     /function="enzyme; Biosynthesis of cofactors, carriers:
+                     Molybdopterin"
+                     /note="f249; 100 pct identical to MOEB_ECOLI SW: P12282"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="molybdopterin biosynthesis"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73913.1>AAC73913.1</a>"
+                     /db_xref="GI:1787048"
+                     /translation="MAELSDQEMLRYNRQIILRGFDFDGQEALKDSRVLIVGLGGLGC
+                     AASQYLASAGVGNLTLLDFDTVSLSNLQRQTLHSDATVGQPKVESARDALTRINPHIA
+                     ITPVNALLDDAELAALIAEHDLVLDCTDNVAVRNQLNAGCFAAKVPLVSGAAIRMEGQ
+                     ITVFTYQDGEPCYRCLSRLFGENALTCVEAGVMAPLIGVIGSLQAMEAIKMLAGYGKP
+                     ASGKIVMYDAMTCQFREMKLMRNPGCEVCGQ"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=795&to=828&view=gbwithparts>repeat_region</a>   795..828
+                     /note="REP (repetitive extragenic palindromic) element;
+                     contains 1 REP sequence"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=817&to=2052&view=gbwithparts>gene</a>            complement(817..2052)
+                     /gene="moeA"
+                     /note="synonym: b0827"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=817&to=2052&view=gbwithparts>CDS</a>             complement(817..2052)
+                     /gene="moeA"
+                     /function="enzyme; Biosynthesis of cofactors, carriers:
+                     Molybdopterin"
+                     /note="f411; 100 pct identical to MOEA_ECOLI SW: P12281"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="molybdopterin biosynthesis"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73914.1>AAC73914.1</a>"
+                     /db_xref="GI:1787049"
+                     /translation="MEFTTGLMSLDTALNEMLSRVTPLTAQETLPLVQCFGRILASDV
+                     VSPLDVPGFDNSAMDGYAVRLADIASGQPLPVAGKSFAGQPYHGEWPAGTCIRIMTGA
+                     PVPEGCEAVVMQEQTEQMDNGVRFTAEVRSGQNIRRRGEDISAGAVVFPAGTRLTTAE
+                     LPVIASLGIAEVPVIRKVRVALFSTGDELQLPGQPLGDGQIYDTNRLAVHLMLEQLGC
+                     EVINLGIIRDDPHALRAAFIEADSQADVVISSGGVSVGEADYTKTILEELGEIAFWKL
+                     AIKPGKPFAFGKLSNSWFCGLPGNPVSATLTFYQLVQPLLAKLSGNTASGLPARQRVR
+                     TASRLKKTPGRLDFQRGVLQRNADGELEVTTTGHQGSHIFSSFSLGNCFIVLERDRGN
+                     VEVGEWVEVEPFNALFGGL"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=875&to=906&view=gbwithparts>promoter</a>        complement(875..906)
+                     /gene="moeA"
+                     /note="factor Sigma70; predicted +1 start at 864403"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=916&to=942&view=gbwithparts>promoter</a>        complement(916..942)
+                     /gene="moeA"
+                     /note="factor Sigma70; predicted +1 start at 864444"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=2147&to=2175&view=gbwithparts>promoter</a>        2147..2175
+                     /note="factor Sigma70; predicted +1 start at 865717"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=2256&to=3221&view=gbwithparts>gene</a>            2256..3221
+                     /gene="ybiK"
+                     /note="synonym: b0828"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=2256&to=3221&view=gbwithparts>CDS</a>             2256..3221
+                     /gene="ybiK"
+                     /function="orf; Not classified"
+                     /note="o321; 100 pct identical to fragment YBIK_ECOLI
+                     SW:P37595 (52 aa) but has 269 additional C-terminal
+                     residues"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="putative asparaginase"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73915.1>AAC73915.1</a>"
+                     /db_xref="GI:1787050"
+                     /translation="MGKAVIAIHGGAGAISRAQMSLQQELRYIEALSAIVETGQKMLE
+                     AGESALDVVTEAVRLLEECPLFNAGIGAVFTRDETHELDACVMDGNTLKAGAVAGVSH
+                     LRNPVLAARLVMEQSPHVMMIGEGAENFAFARGMERVSPEIFSTSLRYEQLLAARKEG
+                     ATVLDHSGAPLDEKQKMGTVGAVALDLDGNLAAATSTGGMTNKLPGRVGDSPLVGAGC
+                     YANNASVAVSCTGTGEVFIRALAAYDIAALMDYGGLSLAEACERVVMEKLPALGGSGG
+                     LIAIDHEGNVALPFNTEGMYRAWGYAGDTPTTGIYREKGDTVATQ"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=3241&to=5079&view=gbwithparts>gene</a>            3241..5079
+                     /gene="b0829"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=3241&to=5079&view=gbwithparts>CDS</a>             3241..5079
+                     /gene="b0829"
+                     /function="putative transport; Not classified"
+                     /note="o612; 48 pct identical (33 gaps) to 525 residues
+                     from hypothetical ABC transporter protein YEJF_ECOLI SW:
+                     P33916 (529 aa)"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="putative ATP-binding component of a transport
+                     system"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73916.1>AAC73916.1</a>"
+                     /db_xref="GI:1787051"
+                     /translation="MLAVENLNIAFMQDQQKIAAVRNLSFSLQRGETLAIVGESGSGK
+                     SVTALALMRLLEQAGGLVQCDKMLLQRRSREVIELSEQNAAQMRHVRGADMAMIFQEP
+                     MTSLNPVFTVGEQIAESIRLHQNASREEAMVEAKRMLDQVRIPEAQTILSRYPHQLSG
+                     GMRQRVMIAMALSCRPAVLIADEPTTALDVTIQAQILQLIKVLQKEMSMGVIFITHDM
+                     GVVAEIADRVLVMYQGEAVETGTVEQIFHAPQHPYTRALLAAVPQLGAMKGLDYPRRF
+                     PLISLEHPAKQAPPIEQKTVVDGEPVLRVRNLVTRFPLRSGLLNRVTREVHAVEKVSF
+                     DLWPGETLSLVGESGSGKSTTGRALLRLVESQGGEIIFNGQRIDTLSPGKLQALRRDI
+                     QFIFQDPYASLDPRQTIGDSIIEPLRVHGLLPGKDAAARVAWLLERVGLLPEHAWRYP
+                     HEFSGGQRQRICIARALALNPKVIIADEAVSALDVSIRGQIINLLLDLQRDFGIAYLF
+                     ISHDMAVVERISHRVAVMYLGQIVEIGPRRAVFENPQHPYTRKLLAAVPVAEPSRQRP
+                     QRVLLSDDLPSNIHLRGEEVAAVSLQCVGPGHYVAQPQSEYAFMRR"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=5099&to=6637&view=gbwithparts>gene</a>            5099..6637
+                     /gene="b0830"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=5099&to=6637&view=gbwithparts>CDS</a>             5099..6637
+                     /gene="b0830"
+                     /function="putative transport; Not classified"
+                     /note="o512; This 512 aa ORF is 29 pct identical (39 gaps)
+                     to 512 residues of an approx. 536 aa protein DPPA_ECOLI
+                     SW: P23847"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="putative transport protein"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73917.1>AAC73917.1</a>"
+                     /db_xref="GI:1787052"
+                     /translation="MARAVHRSGLVALGIATALMASCAFAAKDVVVAVGSNFTTLDPY
+                     DANDTLSQAVAKSFYQGLFGLDKEMKLKNVLAESYTVSDDGITYTVKLREGIKFQDGT
+                     DFNAAAVKANLDRASDPANHLKRYNLYKNIAKTEAIDPTTVKITLKQPFSAFINILAH
+                     PATAMISPAALEKYGKEIGFYPVGTGPYELDTWNQTDFVKVKKFAGYWQPGLPKLDSI
+                     TWRPVADNNTRAAMLQTGEAQFAFPIPYEQATLLEKNKNIELMASPSIMQRYISMNVT
+                     QKPFDNPKVREALNYAINRPALVKVAFAGYATPATGVVPPSIAYAQSYKPWPYDPVKA
+                     RELLKEAGYPNGFSTTLWSSHNHSTAQKVLQFTQQQLAQVGIKAQVTAMDAGQRAAEV
+                     EGKGQKESGVRMFYTGWSASTGEADWALSPLFASQNWPPTLFNTAFYSNKQVDDFLAQ
+                     ALKTNDPAEKTRLYKAAQDIIWQESPWIPLVVEKLVSAHSKNLTGFWIMPDTGFSFED
+                     ADLQ"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=6655&to=7575&view=gbwithparts>gene</a>            6655..7575
+                     /gene="b0831"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=6655&to=7575&view=gbwithparts>CDS</a>             6655..7575
+                     /gene="b0831"
+                     /function="putative transport; Not classified"
+                     /note="o306; This 306 aa ORF is 46 pct identical (32 gaps)
+                     to 306 residues of an approx. 344 aa protein DPPB_ECOLI
+                     SW: P37316"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="putative transport system permease protein"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73918.1>AAC73918.1</a>"
+                     /db_xref="GI:1787053"
+                     /translation="MLNYVIKRLLGLIPTLFIVSVLVFLFVHMLPGDPARLIAGPEAD
+                     AQVIELVRQQLGLDQPLYHQFWHYISNAVQGDFGLSMVSRRPVADEIASRFMPTLWLT
+                     ITSMVWAVIFGMAAGIIAAVWRNRWPDRLSMTIAVSGISFPAFALGMLLIQVFSVELG
+                     WLPTVGADSWQHYILPSLTLGAAVAAVMARFTRASFVDVLSEDYMRTARAKGVSETWV
+                     VLKHGLRNAMIPVVTMMGLQFGFLLGGSIVVEKVFNWPGLGRLLVDSVEMRDYPVIQA
+                     EILLFSLEFILINLVVDVLYAAINPAIRYK"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=7578&to=8489&view=gbwithparts>gene</a>            7578..8489
+                     /gene="b0832"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=7578&to=8489&view=gbwithparts>CDS</a>             7578..8489
+                     /gene="b0832"
+                     /function="putative transport; Not classified"
+                     /note="o303; This 303 aa ORF is 42 pct identical (5 gaps)
+                     to 278 residues of an approx. 304 aa protein DPPC_ECOLI
+                     SW: P37315"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="putative transport system permease protein"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73919.1>AAC73919.1</a>"
+                     /db_xref="GI:1787054"
+                     /translation="MRLFNWRRQAVLNAMPLVKPDQVRTPWHEFWRRFRRQHMAMTAA
+                     LFVILLIVVAIFARWIAPYDAENYFDYDNLNNGPSLQHWFGVDSLGRDIFSRVLVGAQ
+                     ISLAAGVFAVFIGAAIGTLLGLLAGYYEGWWDRLIMRICDVLFAFPGILLAIAVVAVL
+                     GSGIANVIIAVAIFSIPAFARLVRGNTLVLKQQTFIESARSIGASDMTVLLRHILPGT
+                     VSSIVVFFTMRIGTSIISAASLSFLGLGAQPPTPEWGAMLNEARADMVIAPHVAVFPA
+                     LAIFLTVLAFNLLGDGLRDALDPKIKG"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=8552&to=8579&view=gbwithparts>promoter</a>        8552..8579
+                     /note="factor Sigma70; predicted +1 start at 872121"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=8667&to=11015&view=gbwithparts>gene</a>            8667..11015
+                     /gene="b0833"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=8667&to=11015&view=gbwithparts>CDS</a>             8667..11015
+                     /gene="b0833"
+                     /function="orf; Unknown"
+                     /note="o782; This 782 aa ORF is 35 pct identical (4 gaps)
+                     to 227 residues of an approx. 736 aa protein YNTC_AZOCA
+                     SW: Q04855"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="orf, hypothetical protein"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73920.1>AAC73920.1</a>"
+                     /db_xref="GI:1787055"
+                     /translation="MLSLYEKIKIRLIILFLLAALSFIGLFFIINYQLVSERAVKRAD
+                     SRFELIQKNVGYFFKDIERSALTLKDSLYLLKNTEEIQRAVILKMEMMPFLDSVGLVL
+                     DDNKYYLFSRRANDKIVVYHQEQVNGPLVDESGRVIFADFNPSKRPWSVASDDSNNSW
+                     NPAYNCFDRPGKKCISFTLHINGKDHDLLAVDKIHVDLNWRYLNEYLDQISANDEVLF
+                     LKQGHEIIAKNQLAREKLIIYNSEGNYNIIDSVDTEYIEKTSAVPNNALFEIYFYYPG
+                     GNLLNASDKLFYLPFAFIIIVLLVVYLMTTRVFRRQFSEMTELVNTLAFLPDSTDQIE
+                     ALKIREGDAKEIISIKNSIAEMKDAEIERSNKLLSLISYDQESGFIKNMAIIESNNNQ
+                     YLAVGIIKLCGLEAVEAVFGVDERNKIVRKLCQRIAEKYAQCCDIVTFNADLYLLLCR
+                     ENVQTFTRKIAMVNDFDSSFGYRNLRIHKSAICEPLQGENAWSYAEKLKLAISSIRDH
+                     MFSEFIFCDDAKLNEIEENIWIARNIRHAMEIGELFLVYQPIVDINTRAILGAEALCR
+                     WVSAERGIISPLKFITIAEDIGFINELGYQIIKTAMGEFRHFSQRASLKDDFLLHINV
+                     SPWQLNEPHFHERFTTIMKENGLKANSLCVEITETVIERINEHFYLNIEQLRKQGVRI
+                     SIDDFGTGLSNLKRFYEINPDSIKVDSQFTGDIFGTAGKIVRIIFDLARYNRIPVIAE
+                     GVESEDVARELIKLGCVQAQGYLYQKPMPFSAWDKSGKLVKE"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=11023&to=12351&view=gbwithparts>gene</a>            11023..12351
+                     /gene="b0834"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=11023&to=12351&view=gbwithparts>CDS</a>             11023..12351
+                     /gene="b0834"
+                     /function="orf; Unknown"
+                     /note="o442; This 442 aa ORF is 32 pct identical (6 gaps)
+                     to 114 residues of an approx. 184 aa protein YREP_STRAM
+                     SW: P36892"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="orf, hypothetical protein"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73921.1>AAC73921.1</a>"
+                     /db_xref="GI:1787056"
+                     /translation="MSRINKFVLTVSLLIFIMISAVACGIYTQMVKERVYSLKQSVID
+                     TAFAVANIAEYRRSVAIDLINTLNPTEEQLLVGLRTAYADSVSPSYLYDVGPYLISSD
+                     ECIQVKEFEKNYCADIMQVVKYRHVKNTGFISFDGKTFVYYLYPVTHNRSLIFLLGLE
+                     RFSLLSKSLAMDSENLMFSLFKNGKPVTGDEYNAKNAIFTVSEAMEHFAYLPTGLYVF
+                     AYKKDVYLRVCTLIIFFAALVAVISGASCLYLVRRVINRGIVEKEAIINNHFERVLDG
+                     GLFFSAADVKKLYSMYNSAFLDDLTKAMGRKSFDEDLKALPEKGGYLCLFDVDKFKNI
+                     NDTFGHLLGDEVLMKVVKILKSQIPVDKGKVYRFGGDEFAVIYTGGTLEELLSILKEI
+                     VHFQVGSINLSTSIGVAHSNECPTVERLKMLADERLYKSKKNGRAQISWQ"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=12398&to=13723&view=gbwithparts>gene</a>            complement(12398..13723)
+                     /gene="yliG"
+                     /note="synonym: b0835"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=12398&to=13723&view=gbwithparts>CDS</a>             complement(12398..13723)
+                     /gene="yliG"
+                     /function="orf; Unknown"
+                     /note="f441; This 441 aa ORF is 23 pct identical (8 gaps)
+                     to 193 residues of an approx. 440 aa protein PRS7_MOUSE
+                     SW: P46471"
+                     /codon_start=1
+                     /transl_table=<a href=http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG11>11</a>
+                     /product="orf, hypothetical protein"
+                     /protein_id="<a href=/entrez/viewer.fcgi?val=AAC73922.1>AAC73922.1</a>"
+                     /db_xref="GI:1787057"
+                     /translation="MSKVTPQPKIGFVSLGCPKNLVDSERILTELRTEGYDVVPSYDD
+                     ADMVIVNTCGFIDSAVQESLEAIGEALNENGKVIVTGCLGAKEDQIREVHPKVLEITG
+                     PHSYEQVLEHVHHYVPKPKHNPFLSLVPEQGVKLTPRHYAYLKISEGCNHRCTFCIIP
+                     SMRGDLVSRPIGEVLSEAKRLVDAGVKEILVISQDTSAYGVDVKHRTGFHNGEPVKTS
+                     MVSLCEQLSKLGIWTRLHYVYPYPHVDDVIPLMAEGKILPYLDIPLQHASPRILKLMK
+                     RPGSVDRQLARIKQWREICPELTLRSTFIVGFPGETEEDFQMLLDFLKEARLDRVGCF
+                     KYSPVEGADANALPDQVPEEVKEERWNRFMQLQQQISAERLQEKVGREILVIIDEVDE
+                     EGAIGRSMADAPEIDGAVYLNGETNVKPGDILRVKVEHADEYDLWGSRV"
+     <a href=/entrez/viewer.fcgi?val=1787047&from=13834&to=13857&view=gbwithparts>promoter</a>        13834..&gt;13857
+                     /note="factor Sigma70; predicted +1 start at 877404"
+ORIGIN      
+<a name="sequence_1787047"></a>        1 tctgcatcct cataaattgc tgatgacgtg gcggagtgcc gcgtcttatc aggcctggag
+       61 gtggcaatta ctgcccacac acctcacacc ccggattacg catcagtttc atttcgcgaa
+      121 actgacaggt catcgcatcg tacatgacga ttttcccgct ggccggtttg ccataacctg
+      181 ccagcatttt gatcgcttcc attgcctgca acgaaccaat tacgccgatc aacggtgcca
+      241 ttacgcctgc ttccacgcag gttaatgcat tttcaccaaa caaacggcta aggcagcgat
+      301 agcacggttc accgtcctga taagtaaaga cggtgatttg accttccata cgaattgccg
+      361 cgccggaaac cagcggtacc ttcgcggcaa aacagcctgc gttcagttga ttacgtaccg
+      421 caacgttatc cgtacagtcg agcaccagat cgtgttcagc aatcaatgct gcaagttctg
+      481 cgtcatccag cagtgcattg actggcgtaa tcgcgatatg tgggttgatc cgcgtcaggg
+      541 cgtcacgggc ggattccacc ttcggttgcc cgaccgtggc atcactgtgc agtgtctggc
+      601 gttgcagatt cgagagcgaa accgtgtcga agtcgagcag cgtcaggtta ccgacaccgg
+      661 cgcttgccag atactgcgag gctgcacagc cgaggccgcc caggcccact atcagcacgc
+      721 gagaatcttt cagcgcctcc tggccgtcaa aatcaaagcc gcgcagaatg atttgccggt
+      781 tgtagcgcag catctcctga tcgctgagtt ccgccattac aggcctccga acaacgcgtt
+      841 aaacggttct acttccaccc attcgcccac ttccacattg ccgcgatcgc gttccagcac
+      901 gataaagcag ttgccgaggc taaaggagct aaatatatgt gaaccctgat gtccggtggt
+      961 cgtcacttcc agttcgccat cggcgttgcg ttgcagcacg ccgcgctgga aatcaagacg
+     1021 tcctggcgtt tttttcaggc gggacgctgt gcgtacgcgc tggcgcgcgg gcaggccgct
+     1081 ggcggtgtta ccgcttagtt ttgccagcaa aggctgtacc agttgataga aggtcagcgt
+     1141 cgctgaaacc gggttgcccg gcaggccgca gaaccagcta ttgctgagtt taccgaacgc
+     1201 gaacggttta cctggtttaa tcgccagctt ccagaaggcg atctccccca gctcttcaag
+     1261 aatcgttttg gtgtaatccg cctcacccac tgaaacaccg ccggaactga tcaccacatc
+     1321 cgcctggctg tcggcttcaa taaatgcggc gcgcagggca tggggatcgt cgcggataat
+     1381 ccctaagtta attacctcgc atcccaactg ttctaacatc aggtgtacgg cgagacggtt
+     1441 ggtatcgtag atttggccgt cgcccagcgg ctgaccgggc aactggagtt catcaccggt
+     1501 agaaaaaagc gctacacgca ctttacgaat caccggaact tcggcaatcc ccagtgaagc
+     1561 aattactggc agctctgcgg tagtcaggcg agttcccgcc gggaaaacaa ccgcacctgc
+     1621 agagatatct tcaccgcgac ggcgaatatt ttgcccgcta cgcacttcag cagtaaaacg
+     1681 cacgccattg tccatttgtt cagtctgctc ctgcatcacc accgcttcgc agccttccgg
+     1741 caccggcgca ccggtcataa tacgaatgca ggtacccgca ggccattcac catggtatgg
+     1801 ctgaccggca aaggatttac cggcaacggg cagcggttgc ccggaggcaa tatcggctaa
+     1861 acgcaccgcg tagccgtcca ttgcggagtt atcaaacccc ggaacatcaa gcggcgaaac
+     1921 gacatcgctc gccagaatac gaccaaaaca ctgtaccagt ggcagcgttt cctgggcggt
+     1981 cagtggggtg acgcgagaaa gcatctcatt aagcgcggtg tcgagcgaca tcaatccggt
+     2041 ggtaaattcc atgaaaacac tcctgcggag gcaaaatcga atttgcctat tatgtcagaa
+     2101 aaacgccaca gactgtatgc cacctcgggc gtagcgctgg gtcctgcctt tacatgccat
+     2161 atccatcttt ctatattcaa aaattgaatg agtaattcat aaaaattctg atatttatag
+     2221 caaaagtggc gaaccaccct taatggacga atactatggg caaagcagtc attgcaattc
+     2281 atggtggcgc aggtgcaatt agccgcgcgc agatgagtct gcaacaggaa ttacgctaca
+     2341 tcgaggcgtt gtctgccatt gttgaaaccg ggcagaaaat gctggaagcg ggcgaaagtg
+     2401 cgctggatgt ggtgacggaa gcggtgcgtc tgctggaaga gtgtccactg tttaacgccg
+     2461 gaattggcgc tgtctttacg cgtgatgaaa cccatgaact ggacgcctgt gtgatggatg
+     2521 gtaacaccct gaaagccggt gcggtggcgg gcgttagtca tctgcgtaat ccggttcttg
+     2581 ccgcccggct ggtgatggag caaagcccgc atgtgatgat gattggcgaa ggggcagaaa
+     2641 attttgcgtt tgctcgtggc atggagcgcg tctcgccgga gattttctcc acgtctttgc
+     2701 gttatgaaca actactggca gcgcgcaagg aaggggcaac cgtcctcgac catagcggtg
+     2761 cgccactgga tgaaaaacag aaaatgggca ccgtgggggc cgtggcgttg gatttagacg
+     2821 gcaatttggc ggcagccacg tccacaggcg gaatgaccaa taaattaccc ggacgagttg
+     2881 gcgatagtcc cttagtgggt gccggatgct acgccaataa cgccagtgtg gcggtttctt
+     2941 gtaccggcac gggcgaagtc ttcatccgcg cgctggcggc atatgacatc gccgcgttaa
+     3001 tggattacgg cggattaagt ctcgcggaag cctgcgagcg ggtagtaatg gaaaaactcc
+     3061 ctgcgcttgg cggtagcggt ggcttaatcg ctatcgacca tgaagggaat gtcgcgctac
+     3121 cgtttaacac cgaaggaatg tatcgcgcct ggggctacgc aggcgatacg ccaaccaccg
+     3181 gtatctaccg tgaaaaaggg gacaccgttg ccacacagtg atgaacttga tgccggtaat
+     3241 gtgctggcgg ttgaaaatct gaatattgcc tttatgcagg accagcagaa aatagctgcg
+     3301 gtccgcaatc tctcttttag tctgcaacgc ggtgagacgc tggcaattgt tggcgaatcc
+     3361 ggctccggta agtcagtgac tgcgttggca ttgatgcgcc tgttggaaca ggcgggcggt
+     3421 ttagtacagt gcgataaaat gctgttgcag cggcgcagtc gcgaagtgat tgaacttagc
+     3481 gagcagaacg ctgcacaaat gcgccatgtt cgcggtgcgg atatggcgat gatatttcag
+     3541 gagccgatga catcgctgaa cccggtattt actgtgggtg aacagattgc cgaatcaatt
+     3601 cgtctgcatc agaacgccag tcgtgaagaa gcgatggtcg aggcgaagcg gatgctggat
+     3661 caggtacgca ttcctgaggc acaaaccatt ctttcacgtt atccgcatca actctctggc
+     3721 gggatgcgcc agcgagtgat gattgcgatg gcgctgtcat gccgcccggc ggtgctgatt
+     3781 gccgatgagc caaccaccgc gctggatgtc actattcagg cgcagatcct gcaattaatc
+     3841 aaagtattgc aaaaagagat gtcgatgggc gttatcttta tcactcacga tatgggcgtg
+     3901 gtggcagaga ttgccgatcg ggtactggtg atgtatcagg gcgaggcggt ggaaacgggt
+     3961 accgtcgaac agatttttca tgcaccgcaa catccttaca cccgtgcgct gttagctgct
+     4021 gttccgcaac ttggtgcgat gaaagggtta gattatcccc gacgtttccc gttgatatcg
+     4081 cttgaacatc cagcgaaaca ggcccccccc atcgagcaga aaacggtggt ggatggcgaa
+     4141 cctgttttac gagtgcgtaa tcttgtcacc cgtttccctt tgcgcagcgg tttgttgaat
+     4201 cgcgtaacgc gggaagtgca tgccgttgag aaagtcagtt ttgatctctg gcctggcgaa
+     4261 acgctatcgc tggtgggcga gtctggcagc ggtaaatcca ctaccgggcg ggcgttgctg
+     4321 cgcctggtcg aatcgcaggg cggcgaaatt atctttaacg gtcagcgaat cgataccttg
+     4381 tcacccggca aacttcaggc attacgccgg gatattcagt ttatttttca ggacccttac
+     4441 gcttcgctgg acccacgtca gaccatcggt gattcgatta tcgaaccgct gcgtgtacac
+     4501 ggtttattgc caggtaaaga cgcggctgca cgcgttgcgt ggttgctgga gcgcgtgggc
+     4561 ctgttacctg aacatgcctg gcgttacccg catgagtttt ccggcggtca gcgccagcgc
+     4621 atctgcattg ctcgcgcgtt ggcattgaat ccaaaagtga tcattgccga cgaagccgtt
+     4681 tcggcgctgg atgtttctat tcgcgggcag attatcaact tgttgctcga tctccagcgt
+     4741 gatttcggca ttgcgtatct gtttatctcc cacgatatgg cggtggtaga gcggattagt
+     4801 catcgtgtgg cggtgatgta tctcgggcaa attgttgaaa ttggtccacg gcgcgcggtc
+     4861 ttcgaaaacc cgcagcatcc ttatacgcgt aaattactgg cggcagttcc ggtcgctgaa
+     4921 ccgtcccgac aacgaccgca gcgtgtactg ctgtcggacg atcttcccag caatattcat
+     4981 ctgcgtggcg aagaggtggc agccgtctcg ttgcaatgcg tcgggccggg gcattacgtc
+     5041 gcacaaccac aatcagaata cgcattcatg cgtagataac attcaggcgg agaataaaat
+     5101 ggcaagagct gtacaccgta gtgggttagt ggcgctgggc attgcgacag cgttgatggc
+     5161 atcttgtgca ttcgctgcca aagatgtggt ggtggcggta ggatcgaatt tcaccacgct
+     5221 cgatccgtat gacgcaaatg acacgttatc tcaggccgta gcgaaatcgt tttaccaggg
+     5281 gctgttcggt ctggataaag agatgaaact gaaaaacgtg ctggcggaga gttataccgt
+     5341 ttccgatgac ggcattactt acaccgtgaa attgcgggaa ggcattaaat tccaggatgg
+     5401 caccgatttc aacgccgcgg cggtgaaagc gaatctggac cgggccagcg atccggcgaa
+     5461 tcatcttaaa cgctataacc tgtataagaa tattgctaaa acggaagcga tcgatccgac
+     5521 aacggtaaag attaccctca aacagccgtt ctcagcgttt attaatattc ttgcccatcc
+     5581 ggcgaccgcg atgatttcac cggcagcgct ggaaaaatat ggcaaggaga ttggttttta
+     5641 tccggtggga accggaccgt atgaactgga tacctggaat cagaccgatt ttgtgaaggt
+     5701 gaaaaaattc gcgggttact ggcagccagg attgcccaaa ctggacagca taacctggcg
+     5761 tccggtggcg gataacaaca cccgcgcggc aatgctgcaa accggtgaag cgcagtttgc
+     5821 tttccccatt ccttacgagc aggccacact gctggagaaa aacaaaaata tcgagttgat
+     5881 ggccagtccg tcaattatgc agcgttatat cagtatgaac gtgacgcaaa agccgttcga
+     5941 taacccgaag gtccgtgagg cgctgaatta cgccattaac cgtccggcgc tggtgaaagt
+     6001 tgcctttgcg ggctatgcaa cgccagctac tggtgtggta ccgccaagta tcgcctacgc
+     6061 gcaaagttat aaaccgtggc cttacgatcc agtgaaagcg cgcgaattac tgaaagaggc
+     6121 gggatatccc aacggtttca gtaccacgct gtggtcgtca cataaccaca gcaccgcgca
+     6181 gaaagtgctg caatttaccc agcagcagtt agcgcaggtc gggattaaag cccaggtgac
+     6241 tgcgatggat gccggacagc gggcggcaga agttgaaggt aaagggcaaa aagagagcgg
+     6301 cgtgcggatg ttctacactg gctggtcggc ttcaaccggc gaagcggact gggcactatc
+     6361 gccgctgttt gcctcgcaga actggccacc gacgctgttt aataccgcgt tttacagcaa
+     6421 taaacaggtg gatgacttcc tggctcaggc actgaaaact aatgatccgg cggaaaagac
+     6481 ccgcttatat aaggcggcgc aggatatcat ctggcaagaa tcgccgtgga tcccgctggt
+     6541 ggtagaaaaa ctggtgtcgg cacacagtaa aaacctgacc ggtttttgga tcatgccaga
+     6601 caccggcttc agctttgaag acgcggattt gcaataagca acgcagggag tggaatgctt
+     6661 aattacgtta tcaaacgctt actggggttg attccgacgc tgtttatcgt ctcggtgctg
+     6721 gtgtttttat ttgtccatat gctgcccggc gatccggcgc gattgattgc cgggcccgaa
+     6781 gctgatgcgc aggttataga actggtgcgt cagcagctgg ggttggatca gccgctgtat
+     6841 caccagttct ggcactatat cagcaatgct gtgcaggggg attttggcct gtcgatggtg
+     6901 tcgcgtcgtc cggttgccga tgagattgcc agccgcttta tgccaacgct gtggctgacc
+     6961 ataaccagta tggtctgggc ggttatattt ggtatggcgg cgggaattat cgccgccgtc
+     7021 tggcgtaacc gttggccgga tcgattgagt atgaccattg cggtgtcggg gatctcgttt
+     7081 ccggcatttg ctctggggat gcttttaatt caggtattct ccgttgaact gggctggctg
+     7141 cctaccgtgg gagcagacag ttggcagcac tacattttac cctccctgac gctcggcgcg
+     7201 gcagtggccg ccgtgatggc gcgctttacc cgcgcgtcgt ttgtcgatgt tttaagcgaa
+     7261 gattatatgc gtaccgcgag ggcgaaaggg gtgagcgaaa cctgggttgt cctcaaacac
+     7321 gggctacgta acgcgatgat cccggtagtg accatgatgg gcttacagtt tggctttttg
+     7381 ctcggtggtt ccatcgttgt ggagaaagtt ttcaactggc cgggacttgg acgcttactc
+     7441 gttgactccg tagaaatgcg tgattacccg gtgattcagg cggaaattct gcttttctcg
+     7501 ctggaattta ttcttatcaa cttagtggtg gatgtgcttt acgccgccat taacccggct
+     7561 atcaggtaca agtaaggatg cgactattta actggcgacg tcaggcggtg ttaaacgcca
+     7621 tgccactggt caaacctgac caggtacgta caccgtggca tgaattctgg cgacgatttc
+     7681 gccgtcagca tatggcgatg accgccgcat tattcgttat tttattgatt gtggtggcca
+     7741 tttttgcacg ctggatcgct ccctatgacg ccgaaaatta ttttgattat gacaatctga
+     7801 ataacggacc ttctttgcag cactggtttg gcgtcgattc actggggcgt gacattttca
+     7861 gccgtgtcct ggttggtgcg caaatctcgc tggcggcggg cgtgtttgcc gtgtttatcg
+     7921 gtgcggcgat cgggacgttg ctgggcttgc tcgctggata ttatgaaggc tggtgggatc
+     7981 ggctgatcat gcgcatttgc gatgtgctgt ttgccttccc gggtatttta ctggcgatcg
+     8041 ctgttgttgc ggtgttggga agcggcattg ctaacgtgat tattgcagtc gccatttttt
+     8101 ccatccccgc gtttgcccgc ctggtgcgcg gcaacacgct ggtgttgaaa cagcaaacct
+     8161 ttattgagtc agcacgcagt attggtgcca gcgatatgac cgttttgttg cgtcatatcc
+     8221 tgcctgggac cgtctcttct atcgtggtgt ttttcaccat gcgcattggt acctcgatta
+     8281 tctctgccgc cagcctctca tttctcggcc tcggtgcgca gccgccgaca ccagagtggg
+     8341 gagcaatgct caatgaggct cgagcggata tggttatcgc gccgcatgtc gctgtttttc
+     8401 cggccctggc tatttttctg accgtactgg cgttcaattt gttgggcgat ggtttacgcg
+     8461 atgcgctgga tccgaaaatt aaaggatagt tacgtttgaa tattgcttga aagggtaatc
+     8521 acctcacagg aaattattgc cctaagcaag tgttgtaact ttctgctgat tttgtagaat
+     8581 cgggtaattt ggttaaaaag ccgcagcaag ggacaatttt tgcagcggca cagcgttcag
+     8641 atagttattt tgttaaatgt attaacatgc tgagtttata cgaaaagata aagataaggc
+     8701 tgataatttt atttttattg gcagcactgt catttattgg tctttttttc atcattaact
+     8761 atcaactggt atcggagcgc gcggtaaaac gtgccgatag ccgctttgaa cttattcaga
+     8821 aaaacgttgg ctatttcttt aaagatattg aacgttcggc cctgacatta aaggactcac
+     8881 tgtatttatt aaaaaataca gaggagattc aacgcgccgt gattcttaaa atggaaatga
+     8941 tgccattttt agactcggtg ggactggtac ttgatgataa taaatattat cttttttcgc
+     9001 ggagggcgaa tgataaaatc gttgtttatc atcaggaaca agtaaatgga ccgcttgtcg
+     9061 acgagtcagg gcgggttatt tttgccgatt ttaacccatc gaaacgaccg tggtcggtgg
+     9121 cttcagatga ctctaacaac agctggaatc cggcatacaa ttgctttgat cgtccgggta
+     9181 aaaaatgtat ctcttttacg ctacacatca acggcaaaga tcacgatttg ttagcggtgg
+     9241 ataaaattca tgtcgattta aactggcgat atctgaacga gtatcttgat caaatcagcg
+     9301 ctaatgatga agttctattt ttgaaacaag gccatgagat cattgccaag aatcaactcg
+     9361 ctcgtgaaaa actgattatt tataatagcg aaggtaatta taatattatt gattctgtcg
+     9421 atactgaata tatcgaaaaa acatcagcgg tgccaaacaa cgcattattc gaaatctatt
+     9481 tttattatcc tggcggtaat ttattgaacg catcagataa acttttttat ctgccgtttg
+     9541 cgttcattat tatcgtattg ctggtggttt atttaatgac cactcgtgtg ttccgtcggc
+     9601 aattttctga aatgacagag ctggttaata cgctggcgtt tttgcctgac tcaacggatc
+     9661 aaatcgaggc tctgaaaatt cgtgaaggcg atgcgaaaga gattatcagc atcaaaaatt
+     9721 cgatcgcgga aatgaaagat gccgaaattg aacggtcaaa taaattgctc tcactgatct
+     9781 cttacgatca ggaaagtggt tttattaaaa atatggcgat tattgagtct aacaataatc
+     9841 agtatctggc tgtggggatc atcaaactgt gtggtctgga agccgtggaa gcggtgtttg
+     9901 gtgttgatga gcgcaataaa atcgtcagga aattgtgtca gcgaattgcc gagaaatatg
+     9961 cgcaatgctg cgatatcgtg acattcaatg ccgatctcta tttacttctg tgtcgggaaa
+    10021 atgtacagac atttacccgt aaaatagcga tggtaaacga ttttgacagc agctttggct
+    10081 accgcaatct gcgcatccat aagtctgcca tttgtgaacc tttgcagggg gaaaacgcct
+    10141 ggagttacgc agaaaaactg aaactggcga tttccagtat ccgtgaccat atgttctcag
+    10201 agtttatttt ctgtgatgac gcgaaactca acgaaataga agagaatatc tggattgcgc
+    10261 gtaatattcg ccatgcaatg gaaattggcg aactattcct cgtctatcaa ccgatcgttg
+    10321 atattaacac ccgcgccatt ctgggcgcgg aggcgttgtg ccgttgggtg tctgcggagc
+    10381 gggggatcat ttcaccgctg aagttcatta ccattgctga agatatcggg tttatcaatg
+    10441 agctgggtta tcagattatt aaaacggcaa tgggtgaatt cagacatttt agtcagcgtg
+    10501 cgtcgctgaa ggatgatttc ttactgcata ttaatgtttc gccctggcag ttaaacgaac
+    10561 cacactttca tgagcgtttt accaccatca tgaaagaaaa tggcctgaag gcgaacagcc
+    10621 tctgtgttga gatcactgaa accgtgatcg agcgaattaa tgaacatttt tatctcaata
+    10681 ttgaacaact gcgtaaacaa ggggtacgga tatcgattga tgactttggc accggtttgt
+    10741 caaacctgaa acgtttttat gaaattaatc cagacagcat aaaggtggac tcgcaattca
+    10801 ccggcgatat tttcggtact gcgggaaaaa ttgtgcgcat tattttcgac ctggcacgct
+    10861 ataaccggat cccggtgatt gcggaaggcg tagagagcga agacgttgcg cgcgaattaa
+    10921 tcaaattagg atgtgttcag gctcaggggt atctgtacca gaaacccatg ccattctccg
+    10981 cctgggataa aagtggaaaa ttagtaaaag agtagtttac gtatgtccag aatcaataag
+    11041 ttcgtactta cagtcagtct gctgattttt atcatgattt cagcagttgc ctgcgggatc
+    11101 tacactcaaa tggtaaagga acgggtgtat agcctgaaac agtccgttat tgatactgct
+    11161 tttgcggtgg caaatattgc tgaatatcgg cgtagcgtgg caattgatct tatcaacacg
+    11221 ctaaatccca cggaggaaca gctgttggtt ggtttgcgca cagcttacgc cgactcggtt
+    11281 tccccctctt atttgtacga tgtcggtcct tatctgattt ccagtgacga atgtattcag
+    11341 gtaaaggagt tcgagaaaaa ttattgtgca gatattatgc aggttgtgaa gtatcgacat
+    11401 gtcaaaaata cagggtttat ctcttttgac ggtaaaacct tcgtctatta cctctatccg
+    11461 gtaactcaca atcgtagtct gatatttttg cttggtctgg agcgtttttc tttactgtca
+    11521 aaatcgctgg cgatggacag cgagaacctg atgttctctc tatttaagaa cggtaaaccg
+    11581 gtgaccggtg atgaatataa tgctaaaaac gccatcttca ccgtttcgga agcgatggag
+    11641 cacttcgcct atttgccgac cggattgtat gtatttgcgt ataaaaaaga tgtttatttg
+    11701 cgggtttgta cattgattat tttctttgcc gcattggtgg cagtgatatc gggtgccagt
+    11761 tgcctctatc tggtacgcag agtgattaat cgtggtattg tggagaaaga agccatcatt
+    11821 aataaccatt ttgaacgcgt actggatggc gggcttttct tttcggctgc cgatgtcaaa
+    11881 aaactctaca gtatgtataa ctcggcgttc ctggacgacc tgaccaaagc aatgggcaga
+    11941 aaatcctttg acgaagattt aaaagcgctg ccggaaaaag gcggttattt gtgcctgttt
+    12001 gacgtcgata aattcaaaaa cattaacgac accttcggtc atttgctggg cgatgaagtg
+    12061 ttgatgaaag tggtgaaaat ccttaaatca cagatcccgg tagataaagg taaagtctac
+    12121 cgcttcggcg gtgacgaatt tgcggtgatt tatacgggtg gaacgctgga agagttgcta
+    12181 tcgattctaa aagaaatcgt tcatttccag gtgggaagca ttaatttaag taccagtatc
+    12241 ggtgtagcac attcaaatga atgtcctacc gtcgaacgct tgaaaatgct ggcggatgag
+    12301 cggctgtata agagtaagaa aaacggcagg gcacagatta gctggcagta atcattattc
+    12361 gcaggccgga caaatgattt tgcccggcct gaattaatta aacccggcta ccccacaaat
+    12421 cgtactcatc ggcgtgctcg actttcacac gcaggatatc acccggctta acgttggttt
+    12481 caccattgag ataaaccgcg ccgtcgattt ccggtgcatc tgccatgctg cgaccaatcg
+    12541 cgccttcttc gtccacttcg tcgataatca ccagaatttc acggcccact ttctcttgca
+    12601 ggcgctcggc ggaaatctgc tgctgcagct gcatgaaacg gttccagcgt tcttctttaa
+    12661 cttcttccgg aacctggtca ggcagggcat tggcgtctgc accttcaacc gggctgtatt
+    12721 taaagcagcc aacgcgatcc agacgcgctt ctttcaggaa gtcgagtagc atctggaaat
+    12781 cttcttctgt ctcgccaggg aagccgacaa taaaggttga gcgtagggtc agttccgggc
+    12841 agatttcgcg ccactgtttg atgcgcgcca gttggcgatc tacagaaccc ggacgcttca
+    12901 tcagtttgag aatgcgcggg ctggcgtgct gcaacggaat gtccagatac ggcaggattt
+    12961 tgccttctgc catcagtggg atgacgtcgt ccacatgcgg ataagggtaa acgtagtgca
+    13021 gacgtgtcca gatccccagt ttcgataact gttcgcacag gctgaccatg ctggttttta
+    13081 ccggctcgcc gttgtggaag ccagtacgat gtttaacatc aacgccatag gcggaagtat
+    13141 cctgcgagat caccagaatc tctttaacgc ccgcatctac cagacgtttc gcttcactta
+    13201 acacttcgcc aatcggacgg ctcaccaggt cgccgcgcat agacggaata atgcagaagg
+    13261 tgcagcggtg attacagcct tcagaaattt tcagataggc ataatgacgc ggcgtcagtt
+    13321 tcacaccttg ttctggcacc aggctcagga atgggttgtg tttcggtttt ggcacgtagt
+    13381 gatgaacgtg ctccagaacc tgctcatagc tatgaggccc ggtgatttcc agcactttcg
+    13441 ggtggacttc gcggatctga tcttcttttg cccccagaca accggtcaca ataaccttgc
+    13501 cgttttcatt caacgcttca ccaatggctt ccagtgattc ttgtaccgcg ctgtcaataa
+    13561 agccgcaggt gttgacgatc accatgtccg catcgtcata gctcggtacc acgtcataac
+    13621 cttcagtgcg gagttcggtg agaatacgct ctgaatcaac aaggtttttc ggacagccaa
+    13681 gggaaacaaa gccgattttc ggctggggag ttactttgct catagcttaa aaaatattca
+    13741 gttacaggaa aggtcagggc agggattcta cagagttctg gataaaattt gtatcgcaat
+    13801 ctcattcgct ggcggaggcg aaggaaatgt aaattttgtt aattcggcgt gaagaat
+//</pre>
+<a name="slash_1787047"></a></div></div>
+</div><div align="center" class="medium1"><p><a href="http://www.ncbi.nlm.nih.gov/About/disclaimer.html">Disclaimer</a> |
+                <a href="mailto:info@ncbi.nlm.nih.gov">Write to the Help Desk</a><br/><a href="http://www.ncbi.nlm.nih.gov">NCBI</a> |
+                <a href="http://www.nlm.nih.gov">NLM</a> |
+                <a href="http://www.nih.gov">NIH</a></p><p> </p></div><p class="dblinks" align="right"><font color="#eeeeee" size="-5"><!--MUTABLE-->Aug 28 2007 16:53:42<!--MUTABLE--></font></p></body></html>

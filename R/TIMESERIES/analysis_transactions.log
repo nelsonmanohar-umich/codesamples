@@ -1,0 +1,212 @@
+ transaction_count    transaction_date transaction_dow transaction_year transaction_month transaction_quarter
+ Min.   : 2090238   2013-04-01:  1     Min.   :1       2013:198         Min.   : 1.0      1:110              
+ 1st Qu.: 6178573   2013-04-02:  1     1st Qu.:2       2014:264         1st Qu.: 4.0      2:132              
+ Median :12836954   2013-04-03:  1     Median :4       2015: 44         Median : 7.0      3:132              
+ Mean   :16990604   2013-04-04:  1     Mean   :4                        Mean   : 6.7      4:132              
+ 3rd Qu.:25023746   2013-04-06:  1     3rd Qu.:6                        3rd Qu.:10.0                         
+ Max.   :57969835   2013-04-07:  1     Max.   :7                        Max.   :12.0                         
+                    (Other)   :500                                                                           
+ transaction_week transaction_doy transaction_daynum        transaction_age    doy_avg        
+ Min.   : 1       1      :  2     Min.   :  0        00:00:00       :  1    Min.   : 6604654  
+ 1st Qu.:15       2      :  2     1st Qu.:173        10 mons        :  1    1st Qu.:11415907  
+ Median :28       3      :  2     Median :347        10 mons 11 days:  1    Median :15453880  
+ Mean   :27       4      :  2     Mean   :348        10 mons 12 days:  1    Mean   :16990604  
+ 3rd Qu.:40       6      :  2     3rd Qu.:524        10 mons 14 days:  1    3rd Qu.:22435530  
+ Max.   :52       7      :  2     Max.   :698        10 mons 15 days:  1    Max.   :36059656  
+                  (Other):494                        (Other)        :500                      
+    dow_avg            week_avg          month_avg            qt_avg        
+ Min.   :16523304   Min.   : 8187679   Min.   : 8684676   Min.   : 9687569  
+ 1st Qu.:16582741   1st Qu.:11086389   1st Qu.:10806612   1st Qu.: 9687569  
+ Median :17050790   Median :15949306   Median :15877482   Median :14089389  
+ Mean   :16990604   Mean   :16990604   Mean   :16990604   Mean   :16990604  
+ 3rd Qu.:17280507   3rd Qu.:23482953   3rd Qu.:23517635   3rd Qu.:20583009  
+ Max.   :17438844   Max.   :30097902   Max.   :29372522   Max.   :24924817  
+                                                                            
+
+ ARIMA(2,1,2) with drift         : -593
+ ARIMA(0,1,0) with drift         : -226
+ ARIMA(1,1,0) with drift         : -514
+ ARIMA(0,1,1) with drift         : Inf
+ ARIMA(0,1,0)                    : -228
+ ARIMA(1,1,2) with drift         : -587
+ ARIMA(3,1,2) with drift         : -609
+ ARIMA(3,1,1) with drift         : Inf
+ ARIMA(3,1,3) with drift         : Inf
+ ARIMA(2,1,1) with drift         : Inf
+ ARIMA(4,1,3) with drift         : Inf
+ ARIMA(3,1,2)                    : -608
+ ARIMA(4,1,2) with drift         : -607
+
+ Best model: ARIMA(3,1,2) with drift         
+
+
+Call:
+lm(formula = log(transaction_count) ~ transaction_daynum + transaction_week + 
+    transaction_month, data = transactions)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.3803 -0.0751 -0.0232  0.0552  0.3688 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(>|t|)    
+(Intercept)         1.48e+01   1.65e-02   899.6   <2e-16 ***
+transaction_daynum  4.11e-03   2.55e-05   161.3   <2e-16 ***
+transaction_week   -5.45e-02   4.29e-03   -12.7   <2e-16 ***
+transaction_month   2.36e-01   1.86e-02    12.6   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.12 on 502 degrees of freedom
+Multiple R-squared:  0.981,	Adjusted R-squared:  0.981 
+F-statistic: 8.7e+03 on 3 and 502 DF,  p-value: <2e-16
+
+ETS(A,A,N) 
+
+Call:
+ ets(y = log(transactions$transaction_count)) 
+
+  Smoothing parameters:
+    alpha = 1e-04 
+    beta  = 1e-04 
+
+  Initial states:
+    l = 14.9026 
+    b = 0.0057 
+
+  sigma:  0.13
+
+ AIC AICc  BIC 
+1118 1118 1135 
+
+Training set error measures:
+                 ME RMSE MAE    MPE MAPE MASE   ACF1
+Training set -0.003 0.13 0.1 -0.026 0.65 0.67 -0.048
+Series: log(transactions$transaction_count) 
+ARIMA(3,1,2) with drift         
+
+Coefficients:
+         ar1    ar2     ar3    ma1   ma2  drift
+      -0.937  -0.94  -0.447  0.019  0.59  0.005
+s.e.   0.088   0.10   0.076  0.085  0.11  0.003
+
+sigma^2 estimated as 0.017:  log likelihood=311
+AIC=-609   AICc=-609   BIC=-579
+
+Training set error measures:
+                   ME RMSE  MAE    MPE MAPE MASE     ACF1
+Training set -0.00035 0.13 0.11 -0.007 0.68  0.7 -0.00039
+null device 
+          1 
+
+Call:
+arma(x = diff(x_log), lag = list(ar = c(1, 9, 14, 22, 23, 30),     ma = c(1, 3, 16, 24)), include.intercept = FALSE)
+
+Model:
+ARMA(30,24)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.2061 -0.0283  0.0248  0.0636  0.2975 
+
+Coefficient(s):
+      Estimate  Std. Error  t value Pr(>|t|)    
+ar1    -0.2987      0.0282   -10.57  < 2e-16 ***
+ar9    -0.4477      0.0247   -18.15  < 2e-16 ***
+ar14   -0.1300      0.0298    -4.37  1.2e-05 ***
+ar22   -0.3919      0.0259   -15.13  < 2e-16 ***
+ar23   -0.3451      0.0341   -10.13  < 2e-16 ***
+ar30    0.2436      0.0258     9.44  < 2e-16 ***
+ma1    -0.8744      0.0223   -39.15  < 2e-16 ***
+ma3     0.4340      0.0273    15.87  < 2e-16 ***
+ma16   -0.1715      0.0144   -11.88  < 2e-16 ***
+ma24    0.0857      0.0159     5.38  7.3e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Fit:
+sigma^2 estimated as 0.00488,  Conditional Sum-of-Squares = 3.5,  AIC = -1712
+
+Series: x_log 
+ARIMA(30,1,3)(1,0,1)[12]                    
+
+Coefficients:
+        ar1     ar2  ar3     ar4   ar5  ar6  ar7  ar8     ar9   ar10  ar11    ar12  ar13    ar14   ar15    ar16
+      0.681  -0.102    0  -0.076  0.07    0    0    0  -0.254  0.317     0  -0.330  0.30  -0.100  0.178  -0.166
+s.e.  0.034   0.031    0   0.032  0.03    0    0    0   0.026  0.032     0   0.043  0.05   0.045  0.036   0.026
+      ar17  ar18  ar19  ar20  ar21    ar22   ar23  ar24  ar25  ar26  ar27  ar28  ar29   ar30     ma1    ma2
+         0     0     0     0     0  -0.063  0.085     0     0     0     0     0     0  0.428  -2.229  1.928
+s.e.     0     0     0     0     0   0.034  0.033     0     0     0     0     0     0  0.022   0.039  0.061
+         ma3   sar1   sma1
+      -0.663  0.452  -0.12
+s.e.   0.032  0.089   0.11
+
+sigma^2 estimated as 0.00344:  log likelihood=973
+AIC=-1906   AICc=-1905   BIC=-1816
+
+Training set error measures:
+                 ME  RMSE   MAE   MPE MAPE MASE   ACF1
+Training set 0.0022 0.059 0.045 0.013 0.28 0.39 -0.012
+null device 
+          1 
+Series: x_log 
+ARIMA(30,1,3)(1,0,1)[12]                    
+
+Coefficients:
+        ar1     ar2  ar3     ar4   ar5  ar6  ar7  ar8     ar9   ar10  ar11    ar12  ar13    ar14   ar15    ar16
+      0.681  -0.102    0  -0.076  0.07    0    0    0  -0.254  0.317     0  -0.330  0.30  -0.100  0.178  -0.166
+s.e.  0.034   0.031    0   0.032  0.03    0    0    0   0.026  0.032     0   0.043  0.05   0.045  0.036   0.026
+      ar17  ar18  ar19  ar20  ar21    ar22   ar23  ar24  ar25  ar26  ar27  ar28  ar29   ar30     ma1    ma2
+         0     0     0     0     0  -0.063  0.085     0     0     0     0     0     0  0.428  -2.229  1.928
+s.e.     0     0     0     0     0   0.034  0.033     0     0     0     0     0     0  0.022   0.039  0.061
+         ma3   sar1   sma1
+      -0.663  0.452  -0.12
+s.e.   0.032  0.089   0.11
+
+sigma^2 estimated as 0.00344:  log likelihood=973
+AIC=-1906   AICc=-1905   BIC=-1816
+
+Training set error measures:
+                 ME  RMSE   MAE   MPE MAPE MASE   ACF1
+Training set 0.0022 0.059 0.045 0.013 0.28 0.39 -0.012
+                 ME  RMSE   MAE   MPE MAPE MASE   ACF1
+Training set 0.0022 0.059 0.045 0.013 0.28 0.39 -0.012
+
+	Box-Ljung test
+
+data:  residuals(p3)
+X-squared = 0.1, df = 1, p-value = 0.752
+
+
+	Box-Ljung test
+
+data:  residuals(p3)
+X-squared = 0.1, df = 1, p-value = 0.752
+
+                 ME  RMSE   MAE   MPE MAPE MASE   ACF1
+Training set 0.0022 0.059 0.045 0.013 0.28 0.39 -0.012
+null device 
+          1 
+    Point Forecast Lo 80 Hi 80 Lo 95 Hi 95 xcount_vals march_dates
+699             18    18    18    18    18     4.9e+07  2015-03-01
+700             18    18    18    18    18     4.7e+07  2015-03-02
+701             18    18    18    18    18     5.1e+07  2015-03-03
+702             18    18    18    18    18     5.2e+07  2015-03-04
+704             18    18    18    18    18     5.3e+07  2015-03-06
+705             18    18    18    18    18     5.2e+07  2015-03-07
+706             18    18    18    18    18     5.8e+07  2015-03-08
+707             18    18    18    18    18     5.6e+07  2015-03-09
+708             18    18    18    18    18     4.9e+07  2015-03-10
+710             18    18    18    18    18     5.2e+07  2015-03-12
+711             18    18    18    18    18     5.0e+07  2015-03-13
+713             18    18    18    18    18     4.9e+07  2015-03-15
+714             18    18    18    18    18     5.1e+07  2015-03-16
+716             18    18    18    18    18     5.1e+07  2015-03-18
+717             18    18    18    18    18     5.5e+07  2015-03-19
+718             18    18    18    18    18     4.8e+07  2015-03-20
+719             18    18    18    18    18     5.3e+07  2015-03-21
+720             18    18    18    18    18     5.5e+07  2015-03-22
+721             18    18    18    18    18     5.3e+07  2015-03-23
+723             18    18    18    18    18     5.0e+07  2015-03-25
+724             18    18    18    18    18     5.0e+07  2015-03-26
+726             18    18    18    18    18     4.9e+07  2015-03-28

@@ -59,7 +59,7 @@ DATASET, SEPARATOR = ['MERGED', 'TRAIN', 'TEST'][0], '|'
 TARGET_VAR, LABEL_VAR, ID_VAR = 'label', 'xxx', 'xxx'
 TARGET_COVAR = 'xxx'
 # ---------------------------------------------------------------------------
-FIRST_NROWS = 100000
+FIRST_NROWS = 1000000
 # FIRST_NROWS = 1000
 if TEST_RUN:
     FIRST_NROWS = 50000

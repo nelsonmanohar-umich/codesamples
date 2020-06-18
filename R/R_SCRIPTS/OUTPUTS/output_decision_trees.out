@@ -1,0 +1,582 @@
+   buying      maint       doors     persons     lug_boot    safety    class_values
+ high :432   high :432   2    :432   2   :576   big  :576   high:576   acc  : 384  
+ low  :432   low  :432   3    :432   4   :576   med  :576   low :576   good :  69  
+ med  :432   med  :432   4    :432   more:576   small:576   med :576   unacc:1210  
+ vhigh:432   vhigh:432   5more:432                                     vgood:  65  
+
+Classification tree:
+rpart(formula = as.formula(FORMULA), data = XY, minbucket = ..1)
+
+Variables actually used in tree construction:
+[1] buying   lug_boot maint    persons  safety  
+
+Root node error: 360/1210 = 0.29752
+
+n= 1210 
+
+        CP nsplit rel error  xerror     xstd
+1 0.133333      0   1.00000 1.00000 0.044174
+2 0.112500      2   0.73333 0.83333 0.041724
+3 0.041667      4   0.50833 0.54167 0.035527
+4 0.038889      6   0.42500 0.49722 0.034305
+5 0.036111      7   0.38611 0.45278 0.032989
+6 0.026389      8   0.35000 0.44444 0.032731
+7 0.018056     10   0.29722 0.41667 0.031842
+8 0.011111     12   0.26111 0.41944 0.031933
+9 0.010000     13   0.25000 0.40000 0.031287
+
+
+
+Call:
+rpart(formula = as.formula(FORMULA), data = XY, minbucket = ..1)
+  n= 1210 
+
+          CP nsplit rel error    xerror       xstd
+1 0.13333333      0 1.0000000 1.0000000 0.04417388
+2 0.11250000      2 0.7333333 0.8333333 0.04172402
+3 0.04166667      4 0.5083333 0.5416667 0.03552672
+4 0.03888889      6 0.4250000 0.4972222 0.03430526
+5 0.03611111      7 0.3861111 0.4527778 0.03298921
+6 0.02638889      8 0.3500000 0.4444444 0.03273101
+7 0.01805556     10 0.2972222 0.4166667 0.03184222
+8 0.01111111     12 0.2611111 0.4194444 0.03193311
+9 0.01000000     13 0.2500000 0.4000000 0.03128705
+
+Variable importance
+  safety  persons    maint   buying lug_boot    doors 
+      34       21       19       12       12        2 
+
+Node number 1: 1210 observations,    complexity param=0.1333333
+  predicted class=unacc  expected loss=0.2975207  P(node) =1
+    class counts:   262    53   850    45
+   probabilities: 0.217 0.044 0.702 0.037 
+  left son=2 (784 obs) right son=3 (426 obs)
+  Primary splits:
+      persons  splits as  RLL,  improve=91.195000, (0 missing)
+      safety   splits as  LRL,  improve=81.648510, (0 missing)
+      maint    splits as  RLLR, improve=14.641690, (0 missing)
+      buying   splits as  RLLR, improve=12.841370, (0 missing)
+      lug_boot splits as  LLR,  improve= 5.671106, (0 missing)
+
+Node number 2: 784 observations,    complexity param=0.1333333
+  predicted class=unacc  expected loss=0.4591837  P(node) =0.6479339
+    class counts:   262    53   424    45
+   probabilities: 0.334 0.068 0.541 0.057 
+  left son=4 (526 obs) right son=5 (258 obs)
+  Primary splits:
+      safety   splits as  LRL,  improve=127.051800, (0 missing)
+      maint    splits as  RLLR, improve= 20.891560, (0 missing)
+      buying   splits as  RLLR, improve= 20.888380, (0 missing)
+      lug_boot splits as  LLR,  improve=  8.662467, (0 missing)
+      doors    splits as  RLLL, improve=  2.525771, (0 missing)
+
+Node number 3: 426 observations
+  predicted class=unacc  expected loss=0  P(node) =0.3520661
+    class counts:     0     0   426     0
+   probabilities: 0.000 0.000 1.000 0.000 
+
+Node number 4: 526 observations,    complexity param=0.1125
+  predicted class=acc    expected loss=0.5019011  P(node) =0.4347107
+    class counts:   262    53   166    45
+   probabilities: 0.498 0.101 0.316 0.086 
+  left son=8 (262 obs) right son=9 (264 obs)
+  Primary splits:
+      buying   splits as  RLLR, improve=29.621920, (0 missing)
+      maint    splits as  RLLR, improve=28.109300, (0 missing)
+      lug_boot splits as  LLR,  improve=10.803790, (0 missing)
+      safety   splits as  R-L,  improve= 8.981163, (0 missing)
+      doors    splits as  RLLL, improve= 2.649342, (0 missing)
+  Surrogate splits:
+      doors    splits as  LLRR, agree=0.529, adj=0.053, (0 split)
+      lug_boot splits as  RLL,  agree=0.529, adj=0.053, (0 split)
+      maint    splits as  RLLR, agree=0.513, adj=0.023, (0 split)
+
+Node number 5: 258 observations
+  predicted class=unacc  expected loss=0  P(node) =0.2132231
+    class counts:     0     0   258     0
+   probabilities: 0.000 0.000 1.000 0.000 
+
+Node number 8: 262 observations,    complexity param=0.04166667
+  predicted class=acc    expected loss=0.4923664  P(node) =0.2165289
+    class counts:   133    53    31    45
+   probabilities: 0.508 0.202 0.118 0.172 
+  left son=16 (123 obs) right son=17 (139 obs)
+  Primary splits:
+      maint    splits as  LRRL, improve=26.193520, (0 missing)
+      safety   splits as  R-L,  improve=10.854290, (0 missing)
+      lug_boot splits as  RRL,  improve= 7.533046, (0 missing)
+      doors    splits as  RLLL, improve= 2.399212, (0 missing)
+      buying   splits as  -RL-, improve= 2.184668, (0 missing)
+  Surrogate splits:
+      lug_boot splits as  RRL, agree=0.542, adj=0.024, (0 split)
+
+Node number 9: 264 observations,    complexity param=0.1125
+  predicted class=unacc  expected loss=0.4886364  P(node) =0.2181818
+    class counts:   129     0   135     0
+   probabilities: 0.489 0.000 0.511 0.000 
+  left son=18 (133 obs) right son=19 (131 obs)
+  Primary splits:
+      maint    splits as  RLLR, improve=46.1204200, (0 missing)
+      lug_boot splits as  LLR,  improve= 9.9579560, (0 missing)
+      safety   splits as  L-R,  improve= 5.5227270, (0 missing)
+      buying   splits as  L--R, improve= 3.6458580, (0 missing)
+      doors    splits as  RLLL, improve= 0.7530682, (0 missing)
+  Surrogate splits:
+      doors    splits as  LLLR, agree=0.530, adj=0.053, (0 split)
+      buying   splits as  R--L, agree=0.515, adj=0.023, (0 split)
+      lug_boot splits as  LLR,  agree=0.515, adj=0.023, (0 split)
+      safety   splits as  R-L,  agree=0.511, adj=0.015, (0 split)
+
+Node number 16: 123 observations,    complexity param=0.01805556
+  predicted class=acc    expected loss=0.2682927  P(node) =0.1016529
+    class counts:    90     0    26     7
+   probabilities: 0.732 0.000 0.211 0.057 
+  left son=32 (60 obs) right son=33 (63 obs)
+  Primary splits:
+      safety   splits as  L-R,  improve=5.7710800, (0 missing)
+      lug_boot splits as  LLR,  improve=5.3826420, (0 missing)
+      doors    splits as  RLLL, improve=2.9767640, (0 missing)
+      buying   splits as  -RL-, improve=0.8599690, (0 missing)
+      maint    splits as  R--L, improve=0.7099913, (0 missing)
+  Surrogate splits:
+      doors    splits as  RRLR, agree=0.569, adj=0.117, (0 split)
+      persons  splits as  -RL,  agree=0.561, adj=0.100, (0 split)
+      maint    splits as  L--R, agree=0.528, adj=0.033, (0 split)
+      lug_boot splits as  RRL,  agree=0.528, adj=0.033, (0 split)
+
+Node number 17: 139 observations,    complexity param=0.04166667
+  predicted class=good   expected loss=0.618705  P(node) =0.114876
+    class counts:    43    53     5    38
+   probabilities: 0.309 0.381 0.036 0.273 
+  left son=34 (69 obs) right son=35 (70 obs)
+  Primary splits:
+      safety   splits as  R-L,  improve=16.246740, (0 missing)
+      lug_boot splits as  RRL,  improve= 7.871087, (0 missing)
+      maint    splits as  -RL-, improve= 3.556389, (0 missing)
+      buying   splits as  -RL-, improve= 3.339188, (0 missing)
+      doors    splits as  LLRR, improve= 2.122607, (0 missing)
+  Surrogate splits:
+      doors    splits as  LLRL, agree=0.540, adj=0.072, (0 split)
+      persons  splits as  -RL,  agree=0.540, adj=0.072, (0 split)
+      lug_boot splits as  RLR,  agree=0.525, adj=0.043, (0 split)
+      buying   splits as  -LR-, agree=0.511, adj=0.014, (0 split)
+      maint    splits as  -LR-, agree=0.511, adj=0.014, (0 split)
+
+Node number 18: 133 observations,    complexity param=0.01111111
+  predicted class=acc    expected loss=0.2180451  P(node) =0.1099174
+    class counts:   104     0    29     0
+   probabilities: 0.782 0.000 0.218 0.000 
+  left son=36 (95 obs) right son=37 (38 obs)
+  Primary splits:
+      lug_boot splits as  LLR,  improve=11.911280000, (0 missing)
+      safety   splits as  L-R,  improve= 8.917637000, (0 missing)
+      doors    splits as  RLLL, improve= 1.331725000, (0 missing)
+      maint    splits as  -RL-, improve= 0.005478176, (0 missing)
+      buying   splits as  R--L, improve= 0.004177109, (0 missing)
+
+Node number 19: 131 observations,    complexity param=0.02638889
+  predicted class=unacc  expected loss=0.1908397  P(node) =0.1082645
+    class counts:    25     0   106     0
+   probabilities: 0.191 0.000 0.809 0.000 
+  left son=38 (63 obs) right son=39 (68 obs)
+  Primary splits:
+      maint    splits as  L--R, improve=10.2992900, (0 missing)
+      buying   splits as  L--R, improve= 9.3974090, (0 missing)
+      lug_boot splits as  LLR,  improve= 0.5664164, (0 missing)
+      doors    splits as  LRLL, improve= 0.4323742, (0 missing)
+      safety   splits as  L-R,  improve= 0.2994332, (0 missing)
+  Surrogate splits:
+      doors    splits as  RRLL, agree=0.550, adj=0.063, (0 split)
+      persons  splits as  -RL,  agree=0.542, adj=0.048, (0 split)
+      lug_boot splits as  LRR,  agree=0.534, adj=0.032, (0 split)
+      safety   splits as  R-L,  agree=0.534, adj=0.032, (0 split)
+
+Node number 32: 60 observations
+  predicted class=acc    expected loss=0.15  P(node) =0.04958678
+    class counts:    51     0     2     7
+   probabilities: 0.850 0.000 0.033 0.117 
+
+Node number 33: 63 observations,    complexity param=0.01805556
+  predicted class=acc    expected loss=0.3809524  P(node) =0.05206612
+    class counts:    39     0    24     0
+   probabilities: 0.619 0.000 0.381 0.000 
+  left son=66 (42 obs) right son=67 (21 obs)
+  Primary splits:
+      lug_boot splits as  LLR,  improve=11.57143000, (0 missing)
+      doors    splits as  RRLL, improve= 1.72857100, (0 missing)
+      buying   splits as  -LR-, improve= 1.49610400, (0 missing)
+      maint    splits as  L--R, improve= 0.75064940, (0 missing)
+      persons  splits as  -RL,  improve= 0.03639098, (0 missing)
+
+Node number 34: 69 observations,    complexity param=0.03611111
+  predicted class=acc    expected loss=0.4927536  P(node) =0.05702479
+    class counts:    35    31     3     0
+   probabilities: 0.507 0.449 0.043 0.000 
+  left son=68 (20 obs) right son=69 (49 obs)
+  Primary splits:
+      lug_boot splits as  RRL,  improve=9.3128960, (0 missing)
+      buying   splits as  -RL-, improve=2.3531120, (0 missing)
+      maint    splits as  -RL-, improve=1.5627650, (0 missing)
+      doors    splits as  LLRR, improve=0.8335671, (0 missing)
+      persons  splits as  -LR,  improve=0.4600527, (0 missing)
+
+Node number 35: 70 observations,    complexity param=0.03888889
+  predicted class=vgood  expected loss=0.4571429  P(node) =0.05785124
+    class counts:     8    22     2    38
+   probabilities: 0.114 0.314 0.029 0.543 
+  left son=70 (21 obs) right son=71 (49 obs)
+  Primary splits:
+      lug_boot splits as  RRL,  improve=13.1591800, (0 missing)
+      doors    splits as  LLRR, improve= 2.8571430, (0 missing)
+      maint    splits as  -RL-, improve= 2.1041350, (0 missing)
+      buying   splits as  -RL-, improve= 1.2793260, (0 missing)
+      persons  splits as  -LR,  improve= 0.6699895, (0 missing)
+
+Node number 36: 95 observations
+  predicted class=acc    expected loss=0.08421053  P(node) =0.0785124
+    class counts:    87     0     8     0
+   probabilities: 0.916 0.000 0.084 0.000 
+
+Node number 37: 38 observations
+  predicted class=unacc  expected loss=0.4473684  P(node) =0.03140496
+    class counts:    17     0    21     0
+   probabilities: 0.447 0.000 0.553 0.000 
+
+Node number 38: 63 observations,    complexity param=0.02638889
+  predicted class=unacc  expected loss=0.3968254  P(node) =0.05206612
+    class counts:    25     0    38     0
+   probabilities: 0.397 0.000 0.603 0.000 
+  left son=76 (31 obs) right son=77 (32 obs)
+  Primary splits:
+      buying   splits as  L--R, improve=20.481310000, (0 missing)
+      safety   splits as  L-R,  improve= 1.219336000, (0 missing)
+      lug_boot splits as  LRR,  improve= 0.573467000, (0 missing)
+      doors    splits as  RRLL, improve= 0.112414400, (0 missing)
+      persons  splits as  -LR,  improve= 0.001154401, (0 missing)
+  Surrogate splits:
+      doors    splits as  LRRL, agree=0.556, adj=0.097, (0 split)
+      safety   splits as  L-R,  agree=0.540, adj=0.065, (0 split)
+      lug_boot splits as  RRL,  agree=0.524, adj=0.032, (0 split)
+
+Node number 39: 68 observations
+  predicted class=unacc  expected loss=0  P(node) =0.05619835
+    class counts:     0     0    68     0
+   probabilities: 0.000 0.000 1.000 0.000 
+
+Node number 66: 42 observations
+  predicted class=acc    expected loss=0.1666667  P(node) =0.03471074
+    class counts:    35     0     7     0
+   probabilities: 0.833 0.000 0.167 0.000 
+
+Node number 67: 21 observations
+  predicted class=unacc  expected loss=0.1904762  P(node) =0.01735537
+    class counts:     4     0    17     0
+   probabilities: 0.190 0.000 0.810 0.000 
+
+Node number 68: 20 observations
+  predicted class=acc    expected loss=0.15  P(node) =0.01652893
+    class counts:    17     0     3     0
+   probabilities: 0.850 0.000 0.150 0.000 
+
+Node number 69: 49 observations
+  predicted class=good   expected loss=0.3673469  P(node) =0.04049587
+    class counts:    18    31     0     0
+   probabilities: 0.367 0.633 0.000 0.000 
+
+Node number 70: 21 observations
+  predicted class=good   expected loss=0.3333333  P(node) =0.01735537
+    class counts:     5    14     2     0
+   probabilities: 0.238 0.667 0.095 0.000 
+
+Node number 71: 49 observations
+  predicted class=vgood  expected loss=0.2244898  P(node) =0.04049587
+    class counts:     3     8     0    38
+   probabilities: 0.061 0.163 0.000 0.776 
+
+Node number 76: 31 observations
+  predicted class=acc    expected loss=0.1935484  P(node) =0.02561983
+    class counts:    25     0     6     0
+   probabilities: 0.806 0.000 0.194 0.000 
+
+Node number 77: 32 observations
+  predicted class=unacc  expected loss=0  P(node) =0.02644628
+    class counts:     0     0    32     0
+   probabilities: 0.000 0.000 1.000 0.000 
+
+n= 1210 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+ 1) root 1210 360 unacc (0.21652893 0.04380165 0.70247934 0.03719008)  
+   2) persons=4,more 784 360 unacc (0.33418367 0.06760204 0.54081633 0.05739796)  
+     4) safety=high,med 526 264 acc (0.49809886 0.10076046 0.31558935 0.08555133)  
+       8) buying=low,med 262 129 acc (0.50763359 0.20229008 0.11832061 0.17175573)  
+        16) maint=high,vhigh 123  33 acc (0.73170732 0.00000000 0.21138211 0.05691057)  
+          32) safety=high 60   9 acc (0.85000000 0.00000000 0.03333333 0.11666667) *
+          33) safety=med 63  24 acc (0.61904762 0.00000000 0.38095238 0.00000000)  
+            66) lug_boot=big,med 42   7 acc (0.83333333 0.00000000 0.16666667 0.00000000) *
+            67) lug_boot=small 21   4 unacc (0.19047619 0.00000000 0.80952381 0.00000000) *
+        17) maint=low,med 139  86 good (0.30935252 0.38129496 0.03597122 0.27338129)  
+          34) safety=med 69  34 acc (0.50724638 0.44927536 0.04347826 0.00000000)  
+            68) lug_boot=small 20   3 acc (0.85000000 0.00000000 0.15000000 0.00000000) *
+            69) lug_boot=big,med 49  18 good (0.36734694 0.63265306 0.00000000 0.00000000) *
+          35) safety=high 70  32 vgood (0.11428571 0.31428571 0.02857143 0.54285714)  
+            70) lug_boot=small 21   7 good (0.23809524 0.66666667 0.09523810 0.00000000) *
+            71) lug_boot=big,med 49  11 vgood (0.06122449 0.16326531 0.00000000 0.77551020) *
+       9) buying=high,vhigh 264 129 unacc (0.48863636 0.00000000 0.51136364 0.00000000)  
+        18) maint=low,med 133  29 acc (0.78195489 0.00000000 0.21804511 0.00000000)  
+          36) lug_boot=big,med 95   8 acc (0.91578947 0.00000000 0.08421053 0.00000000) *
+          37) lug_boot=small 38  17 unacc (0.44736842 0.00000000 0.55263158 0.00000000) *
+        19) maint=high,vhigh 131  25 unacc (0.19083969 0.00000000 0.80916031 0.00000000)  
+          38) maint=high 63  25 unacc (0.39682540 0.00000000 0.60317460 0.00000000)  
+            76) buying=high 31   6 acc (0.80645161 0.00000000 0.19354839 0.00000000) *
+            77) buying=vhigh 32   0 unacc (0.00000000 0.00000000 1.00000000 0.00000000) *
+          39) maint=vhigh 68   0 unacc (0.00000000 0.00000000 1.00000000 0.00000000) *
+     5) safety=low 258   0 unacc (0.00000000 0.00000000 1.00000000 0.00000000) *
+   3) persons=2 426   0 unacc (0.00000000 0.00000000 1.00000000 0.00000000) *
+------------------------------------------------------------------------
+
+
+
+
+Classification tree:
+rpart(formula = as.formula(FORMULA), data = XY, minbucket = ..1)
+
+Variables actually used in tree construction:
+[1] buying   lug_boot maint    persons  safety  
+
+Root node error: 360/1210 = 0.29752
+
+n= 1210 
+
+        CP nsplit rel error  xerror     xstd
+1 0.133333      0   1.00000 1.00000 0.044174
+2 0.112500      2   0.73333 0.83333 0.041724
+3 0.041667      4   0.50833 0.54167 0.035527
+4 0.038889      6   0.42500 0.49722 0.034305
+5 0.036111      7   0.38611 0.45278 0.032989
+6 0.026389      8   0.35000 0.44444 0.032731
+7 0.018056     10   0.29722 0.41667 0.031842
+8 0.011111     12   0.26111 0.41944 0.031933
+9 0.010000     13   0.25000 0.40000 0.031287
+------------------------------------------------------------------------
+[1] "    7 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.1429"
+[1] "    8 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.5"
+[1] "   20 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.05"
+[1] "   83 [         acc vs.         good]  ==>  [  1]    IMSE=0.01205"
+[1] "  107 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.009346"
+[1] "  115 [         acc vs.         good]  ==>  [  1]    IMSE=0.008696"
+[1] "  120 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.008333"
+[1] "  131 [         acc vs.         good]  ==>  [  1]    IMSE=0.007634"
+[1] "  147 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.02721"
+[1] "  150 [        good vs.        vgood]  ==>  [  1]    IMSE=0.006667"
+[1] "  152 [        good vs.        vgood]  ==>  [  1]    IMSE=0.006579"
+[1] "  157 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.006369"
+[1] "  159 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.006289"
+[1] "  184 [         acc vs.         good]  ==>  [  1]    IMSE=0.005435"
+[1] "  191 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.005236"
+[1] "  202 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.00495"
+[1] "  207 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.004831"
+[1] "  280 [         acc vs.         good]  ==>  [  1]    IMSE=0.003571"
+[1] "  281 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.003559"
+[1] "  287 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.003484"
+[1] "  310 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.003226"
+[1] "  351 [         acc vs.         good]  ==>  [  1]    IMSE=0.002849"
+[1] "  369 [         acc vs.         good]  ==>  [  1]    IMSE=0.00271"
+[1] "  409 [        good vs.        vgood]  ==>  [  1]    IMSE=0.002445"
+[1] "  411 [         acc vs.         good]  ==>  [  1]    IMSE=0.002433"
+[1] "  412 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002427"
+[1] "  421 [         acc vs.         good]  ==>  [  1]    IMSE=0.002375"
+[1] "  433 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.002309"
+[1] "  445 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.002247"
+[1] "  446 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.008969"
+[1] "  455 [       unacc vs.         good]  ==>  [  2]    IMSE=0.008791"
+[1] "  465 [        good vs.        vgood]  ==>  [  1]    IMSE=0.002151"
+[1] "  471 [         acc vs.         good]  ==>  [  1]    IMSE=0.002123"
+[1] "  509 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001965"
+[1] "  530 [         acc vs.        vgood]  ==>  [  2]    IMSE=0.007547"
+[1] "  537 [         acc vs.         good]  ==>  [  1]    IMSE=0.001862"
+[1] "  539 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001855"
+[1] "  565 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.00177"
+[1] "  583 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.006861"
+[1] "  589 [         acc vs.        vgood]  ==>  [  2]    IMSE=0.006791"
+[1] "  598 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001672"
+[1] "  618 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001618"
+[1] "  621 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.00161"
+[1] "  637 [        good vs.        vgood]  ==>  [  1]    IMSE=0.00157"
+[1] "  641 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.00156"
+[1] "  645 [         acc vs.         good]  ==>  [  1]    IMSE=0.00155"
+[1] "  683 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001464"
+[1] "  690 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001449"
+[1] "  701 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001427"
+[1] "  711 [         acc vs.        vgood]  ==>  [  2]    IMSE=0.005626"
+[1] "  725 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.005517"
+[1] "  729 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.005487"
+[1] "  733 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001364"
+[1] "  746 [         acc vs.         good]  ==>  [  1]    IMSE=0.00134"
+[1] "  748 [         acc vs.         good]  ==>  [  1]    IMSE=0.001337"
+[1] "  752 [        good vs.        vgood]  ==>  [  1]    IMSE=0.00133"
+[1] "  769 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.0013"
+[1] "  802 [         acc vs.         good]  ==>  [  1]    IMSE=0.001247"
+[1] "  860 [         acc vs.         good]  ==>  [  1]    IMSE=0.001163"
+[1] "  871 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001148"
+[1] "  874 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001144"
+[1] "  889 [         acc vs.         good]  ==>  [  1]    IMSE=0.001125"
+[1] "  903 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001107"
+[1] "  907 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001103"
+[1] "  920 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001087"
+[1] "  925 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001081"
+[1] "  927 [        good vs.        vgood]  ==>  [  1]    IMSE=0.001079"
+[1] "  943 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.00106"
+[1] "  956 [         acc vs.         good]  ==>  [  1]    IMSE=0.001046"
+[1] "  974 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001027"
+[1] "  984 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001016"
+[1] " 1009 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.0009911"
+[1] " 1016 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.0009843"
+[1] " 1020 [         acc vs.         good]  ==>  [  1]    IMSE=0.0009804"
+[1] " 1025 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.0009756"
+[1] " 1064 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.0009398"
+[1] " 1091 [        good vs.        vgood]  ==>  [  1]    IMSE=0.0009166"
+[1] " 1095 [       unacc vs.         good]  ==>  [  2]    IMSE=0.003653"
+[1] " 1102 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.0009074"
+[1] " 1103 [         acc vs.         good]  ==>  [  1]    IMSE=0.0009066"
+[1] " 1116 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.0008961"
+[1] " 1126 [         acc vs.         good]  ==>  [  1]    IMSE=0.0008881"
+[1] " 1133 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.0008826"
+[1] " 1144 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.0008741"
+[1] " 1163 [         acc vs.         good]  ==>  [  1]    IMSE=0.0008598"
+[1] " 1164 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.003436"
+[1] " 1167 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.0008569"
+[1] " 1170 [         acc vs.         good]  ==>  [  1]    IMSE=0.0008547"
+[1] " 1180 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.0008475"
+[1] " 1187 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.0008425"
+------------------------------------------------------------------------
+       YP
+Y       acc good unacc vgood
+  acc   215   23    21     3
+  good    0   45     0     8
+  unacc  26    2   822     0
+  vgood   7    0     0    38
+------------------------------------------------------------------------
+[1] "    2 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.5"
+[1] "   28 [         acc vs.         good]  ==>  [  1]    IMSE=0.03571"
+[1] "   41 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.02439"
+[1] "   66 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.01515"
+[1] "  122 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.008197"
+[1] "  132 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.0303"
+[1] "  134 [         acc vs.         good]  ==>  [  1]    IMSE=0.007463"
+[1] "  136 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.007353"
+[1] "  141 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.007092"
+[1] "  148 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.006757"
+[1] "  153 [         acc vs.         good]  ==>  [  1]    IMSE=0.006536"
+[1] "  170 [         acc vs.         good]  ==>  [  1]    IMSE=0.005882"
+[1] "  175 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.005714"
+[1] "  182 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.005495"
+[1] "  197 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.005076"
+[1] "  204 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.004902"
+[1] "  207 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.004831"
+[1] "  221 [         acc vs.         good]  ==>  [  1]    IMSE=0.004525"
+[1] "  226 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.004425"
+[1] "  235 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.004255"
+[1] "  240 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.004167"
+[1] "  241 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.0166"
+[1] "  254 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.003937"
+[1] "  300 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.003333"
+[1] "  308 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.003247"
+[1] "  316 [       unacc vs.         good]  ==>  [  2]    IMSE=0.01266"
+[1] "  318 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.003145"
+[1] "  334 [        good vs.        vgood]  ==>  [  1]    IMSE=0.002994"
+[1] "  336 [         acc vs.         good]  ==>  [  1]    IMSE=0.002976"
+[1] "  337 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.01187"
+[1] "  342 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.0117"
+[1] "  348 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.01149"
+[1] "  355 [         acc vs.         good]  ==>  [  1]    IMSE=0.002817"
+[1] "  356 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002809"
+[1] "  365 [         acc vs.         good]  ==>  [  1]    IMSE=0.00274"
+[1] "  370 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002703"
+[1] "  377 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.002653"
+[1] "  393 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002545"
+[1] "  403 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.002481"
+[1] "  407 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002457"
+[1] "  409 [         acc vs.         good]  ==>  [  1]    IMSE=0.002445"
+[1] "  426 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002347"
+[1] "  443 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002257"
+[1] "  460 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.002174"
+[1] "  470 [       unacc vs.         good]  ==>  [  2]    IMSE=0.008511"
+[1] "  473 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.008457"
+[1] "  507 [         acc vs.        unacc]  ==>  [ -1]    IMSE=0.001972"
+------------------------------------------------------------------------
+       YP
+Y       acc good unacc vgood
+  acc    99    9    14     0
+  good    0   15     0     1
+  unacc  15    2   343     0
+  vgood   6    0     0    14
+------------------------------------------------------------------------
+[1] "PDF file plot_decision_trees_summary.pdf was generated summarizing an assessment of the generated decision tree"
+------------------------------------------------------------------------
+class_values ~ .
+
+Call:
+ randomForest(formula = FORMULA, data = T_XY, imp = 1, mtry0 = 2,      ntree = 1023, maxnodes = 127) 
+               Type of random forest: classification
+                     Number of trees: 1023
+No. of variables tried at each split: 2
+
+        OOB estimate of  error rate: 3.39%
+Confusion matrix:
+      acc good unacc vgood class.error
+acc   258    4     0     0  0.01526718
+good    4   47     0     2  0.11320755
+unacc  21    2   827     0  0.02705882
+vgood   7    1     0    37  0.17777778
+------------------------------------------------------------------------
+                acc      good      unacc     vgood MeanDecreaseAccuracy MeanDecreaseGini
+buying   101.996735 61.322257  76.975050 62.161180           127.145775         68.36613
+maint     92.557376 61.595058  78.665812 38.272537           116.391899         68.40372
+doors     -4.598229  1.511483  -2.899374  4.861639            -2.419423         23.79544
+persons  137.596107 45.355589 193.313769 46.923618           202.811968        128.36138
+lug_boot  49.235144 39.319105  41.432350 43.802632            78.690870         36.92639
+safety   138.620069 65.534016 176.647261 75.076686           201.343663        145.35749
+------------------------------------------------------------------------
+[1] "    8 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.5"
+[1] "  690 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.001449"
+------------------------------------------------------------------------
+       YP
+Y       acc good unacc vgood
+  acc   262    0     0     0
+  good    0   53     0     0
+  unacc   1    0   849     0
+  vgood   1    0     0    44
+------------------------------------------------------------------------
+[1] "   47 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.08511"
+[1] "   66 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.01515"
+[1] "  127 [       vgood vs.         good]  ==>  [ -1]    IMSE=0.007874"
+[1] "  132 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.0303"
+[1] "  136 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.007353"
+[1] "  156 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.00641"
+[1] "  175 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.005714"
+[1] "  226 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.004425"
+[1] "  240 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.004167"
+[1] "  296 [       vgood vs.         good]  ==>  [ -1]    IMSE=0.003378"
+[1] "  318 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.003145"
+[1] "  337 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.01187"
+[1] "  342 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.0117"
+[1] "  348 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.01149"
+[1] "  365 [         acc vs.         good]  ==>  [  1]    IMSE=0.00274"
+[1] "  370 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002703"
+[1] "  393 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002545"
+[1] "  438 [        good vs.          acc]  ==>  [ -1]    IMSE=0.002283"
+[1] "  443 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002257"
+[1] "  470 [       unacc vs.          acc]  ==>  [  1]    IMSE=0.002128"
+[1] "  473 [       vgood vs.          acc]  ==>  [ -2]    IMSE=0.008457"
+------------------------------------------------------------------------
+       YP
+Y       acc good unacc vgood
+  acc   121    1     0     0
+  good    1   15     0     0
+  unacc  11    0   349     0
+  vgood   6    2     0    12
+------------------------------------------------------------------------
+[1] "PDF file plot_decision_trees_random_forest_summary.pdf was generated summarizing an assessment of the random-forest selected tree"

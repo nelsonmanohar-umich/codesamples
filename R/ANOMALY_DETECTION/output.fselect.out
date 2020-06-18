@@ -1,0 +1,527 @@
+
+[1] "               START: "
+   user  system elapsed 
+  0.020   0.000   0.018 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------
+[1] "BostonHousing, R:N REGRESSION NUMERICAL"
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+[1] "DF STATS: 506x13 [data.frame w/ 13 elems]"
+
+[1] "ORIGINAL no dimensionality reduction: [506 x 13]"
+[1] "APPLIED: missingcase() reduction: [506 x 13]"
+[1] "APPLIED: subsampling() reduction: [256 x 13]"
+[1] 13
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+'data.frame':	256 obs. of  12 variables:
+ $ crim   : num  0.17 0.0686 0.1143 0.2288 0.1312 ...
+ $ zn     : num  12.5 0 0 0 0 0 0 0 0 0 ...
+ $ indus  : num  7.87 2.89 8.56 8.56 8.56 ...
+ $ nox    : num  0.524 0.445 0.52 0.52 0.52 0.52 0.52 0.547 0.547 0.547 ...
+ $ rm     : num  6 7.42 6.78 6.41 6.13 ...
+ $ age    : num  85.9 62.5 71.3 85.4 85.2 97.1 54.4 81.6 92.9 72.5 ...
+ $ dis    : num  6.59 3.5 2.86 2.71 2.12 ...
+ $ rad    : num  5 2 5 5 5 5 5 6 6 6 ...
+ $ tax    : num  311 276 384 384 384 384 384 432 432 432 ...
+ $ ptratio: num  15.2 18 20.9 20.9 20.9 20.9 20.9 17.8 17.8 17.8 ...
+ $ b      : num  386.7 396.9 395.6 70.8 387.7 ...
+ $ lstat  : num  17.1 6.19 7.67 10.63 14.09 ...
+[1] "APPLIED: correlation() reduction: [256 x 12]"
+medv ~ .
+<environment: 0x8b9126c>
+        attr_importance row.names(weights)
+lstat         0.8552173              lstat
+rm            0.6240449                 rm
+ptratio       0.6136108            ptratio
+indus         0.6083007              indus
+age           0.5873724                age
+tax           0.5871687                tax
+crim          0.5870007               crim
+nox           0.5801183                nox
+zn            0.5045168                 zn
+dis           0.4860213                dis
+rad           0.3682162                rad
+b             0.1945330                  b
+[1] "WARNING: apparently, too many variables selected, rerunning to reduce from 10 to 5"
+
+[1] "subset <- cutoff.k(weights <- rank.correlation(~, d), 10): "                                 
+[2] "subset <- cutoff.k(weights <- rank.correlation(medv, d), 10): "                              
+[3] "subset <- cutoff.k(weights <- rank.correlation(lstat + rm + ptratio + indus + age, d), 10): "
+   user  system elapsed 
+  0.236   0.012   0.256 
+
+medv ~ lstat + rm + ptratio + indus + age
+<environment: 0x9739ce0>
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------
+[1] "BostonHousing, R:N REGRESSION NUMERICAL"
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+[1] "DF STATS: 506x13 [data.frame w/ 13 elems]"
+
+[1] "ORIGINAL no dimensionality reduction: [506 x 13]"
+[1] "APPLIED: missingcase() reduction: [506 x 13]"
+[1] "APPLIED: subsampling() reduction: [256 x 13]"
+[1] 13
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+'data.frame':	256 obs. of  12 variables:
+ $ crim   : num  0.00632 0.17004 0.14866 0.11432 0.13262 ...
+ $ zn     : num  18 12.5 0 0 0 0 0 12.5 0 0 ...
+ $ indus  : num  2.31 7.87 8.56 8.56 8.56 8.56 8.56 7.87 8.56 8.56 ...
+ $ nox    : num  0.538 0.524 0.52 0.52 0.52 0.52 0.52 0.524 0.52 0.52 ...
+ $ rm     : num  6.58 6 6.73 6.78 5.85 ...
+ $ age    : num  65.2 85.9 79.9 71.3 96.7 85.2 97.1 94.3 91.2 54.4 ...
+ $ dis    : num  4.09 6.59 2.78 2.86 2.11 ...
+ $ rad    : num  1 5 5 5 5 5 5 5 5 5 ...
+ $ tax    : num  296 311 384 384 384 384 384 311 384 384 ...
+ $ ptratio: num  15.3 15.2 20.9 20.9 20.9 20.9 20.9 15.2 20.9 20.9 ...
+ $ b      : num  397 387 395 396 394 ...
+ $ lstat  : num  4.98 17.1 9.42 7.67 16.47 ...
+[1] "APPLIED: correlation() reduction: [256 x 12]"
+medv ~ .
+<environment: 0x9718a0c>
+        attr_importance row.names(weights)
+lstat         0.7258016              lstat
+rm            0.6899336                 rm
+indus         0.4096647              indus
+ptratio       0.4060627            ptratio
+tax           0.3882062                tax
+crim          0.3874953               crim
+nox           0.3449277                nox
+b             0.3118956                  b
+rad           0.3008459                rad
+zn            0.2766030                 zn
+age           0.2667372                age
+dis           0.1699951                dis
+[1] "WARNING: apparently, too many variables selected, rerunning to reduce from 10 to 5"
+
+[1] "subset <- cutoff.k(weights <- linear.correlation(~, d), 10): "                                 
+[2] "subset <- cutoff.k(weights <- linear.correlation(medv, d), 10): "                              
+[3] "subset <- cutoff.k(weights <- linear.correlation(lstat + rm + indus + ptratio + tax, d), 10): "
+   user  system elapsed 
+  0.304   0.016   0.340 
+
+medv ~ lstat + rm + indus + ptratio + tax
+<environment: 0x9da8c40>
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------
+[1] "HouseVotes84, C:F CLASSIFICATION FACTORS"
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+[1] "DF STATS: 435x17 [data.frame w/ 17 elems]"
+
+[1] "ORIGINAL no dimensionality reduction: [435 x 17]"
+[1] "APPLIED: missingcase() reduction: [232 x 17]"
+[1] "APPLIED: subsampling() reduction: [232 x 17]"
+Class ~ .
+<environment: 0x98490b4>
+    attr_importance row.names(weights)
+V4       0.94042449                 V4
+V5       0.75434730                 V5
+V12      0.72281959                V12
+V3       0.69704104                 V3
+V8       0.68109983                 V8
+V14      0.66048662                V14
+V9       0.65010010                 V9
+V13      0.55344908                V13
+V15      0.50157070                V15
+V7       0.49761051                 V7
+V6       0.44415783                 V6
+V1       0.38055098                 V1
+V11      0.36799217                V11
+V16      0.35542819                V16
+V10      0.04194147                V10
+V2       0.02062241                 V2
+[1] "WARNING: apparently, too many variables selected, rerunning to reduce from 10 to 6"
+
+[1] "subset <- cutoff.k(weights <- chi.squared(~, d), 10): "                            
+[2] "subset <- cutoff.k(weights <- chi.squared(Class, d), 10): "                        
+[3] "subset <- cutoff.k(weights <- chi.squared(V4 + V5 + V12 + V3 + V8 + V14, d), 10): "
+   user  system elapsed 
+  0.884   0.044   0.910 
+
+Class ~ V4 + V5 + V12 + V3 + V8 + V14
+<environment: 0x9a7596c>
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------
+[1] "HouseVotes84, C:F CLASSIFICATION FACTORS"
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+[1] "DF STATS: 435x17 [data.frame w/ 17 elems]"
+
+[1] "ORIGINAL no dimensionality reduction: [435 x 17]"
+[1] "APPLIED: missingcase() reduction: [232 x 17]"
+[1] "APPLIED: subsampling() reduction: [232 x 17]"
+Class ~ .
+<environment: 0x987d7f8>
+    attr_importance row.names(weights)
+V4       0.93263551                 V4
+V5       0.75074680                 V5
+V12      0.71695581                V12
+V3       0.69078722                 V3
+V14      0.68144923                V14
+V8       0.67384173                 V8
+V9       0.64290546                 V9
+V13      0.54876689                V13
+V15      0.51213558                V15
+V7       0.49174673                 V7
+V6       0.45633400                 V6
+V16      0.45039314                V16
+V11      0.38032043                V11
+V1       0.37955289                 V1
+V10      0.06745353                V10
+V2       0.06150071                 V2
+[1] "WARNING: apparently, too many variables selected, rerunning to reduce from 10 to 6"
+
+[1] "subset <- cutoff.k(weights <- oneR(~, d), 10): "                            
+[2] "subset <- cutoff.k(weights <- oneR(Class, d), 10): "                        
+[3] "subset <- cutoff.k(weights <- oneR(V4 + V5 + V12 + V3 + V14 + V8, d), 10): "
+   user  system elapsed 
+  1.264   0.052   1.298 
+
+Class ~ V4 + V5 + V12 + V3 + V14 + V8
+<environment: 0x971063c>
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------
+[1] "iris, C:N CLASSIFICATION NUMERICAL"
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+[1] "DF STATS: 150x5 [data.frame w/ 5 elems]"
+
+[1] "ORIGINAL no dimensionality reduction: [150 x 5]"
+[1] "APPLIED: missingcase() reduction: [150 x 5]"
+[1] "APPLIED: subsampling() reduction: [150 x 5]"
+[1] 5
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+'data.frame':	150 obs. of  4 variables:
+ $ Sepal.Length: num  5.1 4.9 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 ...
+ $ Sepal.Width : num  3.5 3.1 2.8 3.3 2.7 3 2.9 3 3 2.5 ...
+ $ Petal.Length: num  1.4 1.5 4.1 6 5.1 5.9 5.6 5.8 6.6 4.5 ...
+ $ Petal.Width : num  0.2 0.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 ...
+[1] "APPLIED: correlation() reduction: [150 x 4]"
+Species ~ .
+<environment: 0x944d4a8>
+             attr_importance row.names(weights)
+Petal.Width        0.8713692        Petal.Width
+Petal.Length       0.8584937       Petal.Length
+Sepal.Length       0.4196464       Sepal.Length
+Sepal.Width        0.2472972        Sepal.Width
+
+[1] "subset <- cutoff.k(weights <- gain.ratio(~, d), 3): "                                        
+[2] "subset <- cutoff.k(weights <- gain.ratio(Species, d), 3): "                                  
+[3] "subset <- cutoff.k(weights <- gain.ratio(Petal.Width + Petal.Length + Sepal.Length, d), 3): "
+   user  system elapsed 
+  1.460   0.056   1.467 
+
+Species ~ Petal.Width + Petal.Length + Sepal.Length
+<environment: 0x9b62400>
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------
+[1] "iris, C:N CLASSIFICATION NUMERICAL"
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+[1] "DF STATS: 150x5 [data.frame w/ 5 elems]"
+
+[1] "ORIGINAL no dimensionality reduction: [150 x 5]"
+[1] "APPLIED: missingcase() reduction: [150 x 5]"
+[1] "APPLIED: subsampling() reduction: [150 x 5]"
+[1] 5
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+'data.frame':	150 obs. of  4 variables:
+ $ Sepal.Length: num  5.1 4.9 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 ...
+ $ Sepal.Width : num  3.5 3.1 2.8 3.3 2.7 3 2.9 3 3 2.5 ...
+ $ Petal.Length: num  1.4 1.5 4.1 6 5.1 5.9 5.6 5.8 6.6 4.5 ...
+ $ Petal.Width : num  0.2 0.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 ...
+[1] "APPLIED: correlation() reduction: [150 x 4]"
+Species ~ .
+<environment: 0x9ce6e04>
+             attr_importance row.names(weights)
+Petal.Width        0.9554360        Petal.Width
+Petal.Length       0.9402853       Petal.Length
+Sepal.Length       0.4521286       Sepal.Length
+Sepal.Width        0.2672750        Sepal.Width
+
+[1] "subset <- cutoff.k(weights <- information.gain(~, d), 3): "                                        
+[2] "subset <- cutoff.k(weights <- information.gain(Species, d), 3): "                                  
+[3] "subset <- cutoff.k(weights <- information.gain(Petal.Width + Petal.Length + Sepal.Length, d), 3): "
+   user  system elapsed 
+  1.592   0.056   1.594 
+
+Species ~ Petal.Width + Petal.Length + Sepal.Length
+<environment: 0x95293b8>
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------
+[1] "iris, C:N CLASSIFICATION NUMERICAL"
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+[1] "DF STATS: 150x5 [data.frame w/ 5 elems]"
+
+[1] "ORIGINAL no dimensionality reduction: [150 x 5]"
+[1] "APPLIED: missingcase() reduction: [150 x 5]"
+[1] "APPLIED: subsampling() reduction: [150 x 5]"
+[1] 5
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+'data.frame':	150 obs. of  4 variables:
+ $ Sepal.Length: num  5.1 4.9 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 ...
+ $ Sepal.Width : num  3.5 3.1 2.8 3.3 2.7 3 2.9 3 3 2.5 ...
+ $ Petal.Length: num  1.4 1.5 4.1 6 5.1 5.9 5.6 5.8 6.6 4.5 ...
+ $ Petal.Width : num  0.2 0.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 ...
+[1] "APPLIED: correlation() reduction: [150 x 4]"
+Species ~ .
+<environment: 0x963e368>
+             attr_importance row.names(weights)
+Petal.Width        0.8705214        Petal.Width
+Petal.Length       0.8571872       Petal.Length
+Sepal.Length       0.4155563       Sepal.Length
+Sepal.Width        0.2452743        Sepal.Width
+
+[1] "subset <- cutoff.k(weights <- symmetrical.uncertainty(~, d), 3): "                                        
+[2] "subset <- cutoff.k(weights <- symmetrical.uncertainty(Species, d), 3): "                                  
+[3] "subset <- cutoff.k(weights <- symmetrical.uncertainty(Petal.Width + Petal.Length + Sepal.Length, d), 3): "
+   user  system elapsed 
+  1.724   0.056   1.717 
+
+Species ~ Petal.Width + Petal.Length + Sepal.Length
+<environment: 0x9b6b1cc>
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

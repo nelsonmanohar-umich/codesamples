@@ -4,6 +4,10 @@ coded each solution that is shown and have a leetcode
 submission profile to show this. None is copied from 
 any site.
 
+These are leetcode solutions (meaning the def statement
+has a type-based signature), so to verify them, you
+need to go to leetcode.com and run them.
+
 I am providing them because I realized that after a 
 hiatus of SEVERAL YEARS from employment I realized that
 I had ZERO recent code samples to show to prospective 

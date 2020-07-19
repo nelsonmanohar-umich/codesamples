@@ -3,6 +3,7 @@ class Solution:
         You may assume that the maximum length of s is 1000.
     '''
     def longestPalindrome(self, s: str) -> str:
+        # very innefficient O(n3), an LCS approach will be tried later
         n = len(s)
         if len(set(s)) == 1: return s
 

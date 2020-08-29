@@ -1,0 +1,10 @@
+        if False:
+            # brute force to see what level of performance it gets
+            n = len(chars)
+            bitformat = "{:0%sb}" % n
+            items = [bitformat.format(i)[::-1] for i in range(2**n) if bin(i).count('1') == self.k]
+            i2c = dict(zip(range(n), chars))
+            words = ["".join([i2c[i] for i, b in enumerate(bits) if b == '1']) for bits in items]
+            self.words = {}
+            for w in words: self.words[w] = True
+            self.keys = sorted(list(self.words.keys()))

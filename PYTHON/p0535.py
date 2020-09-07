@@ -38,7 +38,7 @@ class Codec:
                 return k
             key = _getkey(length)
             while key in self.s2l:
-                key = key[:-1] + self.i2a[randint(0,len(self.a2i)-1)]
+                key = key[1:] + self.i2a[randint(0,len(self.a2i)-1)]
         self.cnt += 1
         return key
 

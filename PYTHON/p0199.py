@@ -25,14 +25,12 @@ class Solution:
         children = successors(parents)
         depth = 0
         depths = {}
-        depths[depth] = parents
+        depths[depth] = parents[-1]
         while children:
             depth += 1
-            depths[depth] = children
+            depths[depth] = children[-1]
             children = successors(children)
 
-        out = []
-        for d in range(len(depths)):
-            out.append(depths[d][-1].val)
+        out = [depths[d].val for d in range(len(depths))]
 
         return out

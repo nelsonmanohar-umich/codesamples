@@ -19,26 +19,23 @@ class Solution:
     '''
 
     def firstMissingPositive(self, nums: List[int]) -> int:
-        # O(nlogn)
-        v2i = {}
         vals = [x for x in nums if x > 0]
 
+        n = len(vals)
+        if n == 0: return 1
+        if n == 1: return 2 if vals[0] == 1 else 1
+        if n == 1: return min(vals[0]-1,1) if vals[0]>1 else min(vals[0]+1,1)
+        if 1 not in vals: return 1
+
+        v2i = {}
         for i, v in enumerate(vals):
             if v not in v2i:
                 v2i[v] = []
             v2i[v].append(i)
 
-        vals = sorted(list(v2i.keys()))
         vals.sort()
-        n = len(vals)
-        if n == 0: return 1
-        if n == 1: return 2 if vals[0] == 1 else 1
-        if n == 1: return min(nums[0]-1,1) if vals[0]>1 else min(nums[0]+1,1)
-        if vals[0] > 1: return 1
-
         for i, v in enumerate(vals):
             if v-1 and v-1 not in v2i: return v-1
             if v+1 not in v2i: return v+1
             i += 1
-
 
